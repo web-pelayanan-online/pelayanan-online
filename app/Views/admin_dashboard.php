@@ -33,10 +33,10 @@
   <div class="wrapper">
 
     <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
+    <!-- <div class="preloader flex-column justify-content-center align-items-center">
       <img class="animation__shake" src="img/Bantul.png" height="80" width="60">
       <p>Kelurahan Gilangharjo</p>
-    </div>
+    </div> -->
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -74,7 +74,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-widget="" href="<?php echo base_url(); ?>" role="button">
+          <a class="nav-link" data-widget="" href="<?= base_url("/logout") ?>" role="button">
             <i class="fas fa-chevron-circle-right"> Logout</i>
           </a>
         </li>
