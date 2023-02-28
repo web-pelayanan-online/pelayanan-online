@@ -11,7 +11,7 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Admin');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -29,7 +29,19 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/auth', 'Admin::login');
+$routes->get('admin_dashboard', 'Admin::dashboard', ['filter' => 'auth']);
+$routes->get('admin_verifikasi', 'Admin::verifikasi');
+$routes->get('/logout', 'AuthController::logout');
+
+
+
+$routes->post('register', 'AuthController::index');
+$routes->post('login', 'AuthController::login');
+
+$routes->get('/beranda', 'Main::beranda');
+$routes->get('/surat_usaha', 'Main::usaha');
+
 
 /*
  * --------------------------------------------------------------------
