@@ -39,6 +39,10 @@ $routes->get('/logout', 'AuthController::logout');
 $routes->post('register', 'AuthController::index');
 $routes->post('login', 'AuthController::login');
 
+$routes->get('/beranda', 'Main::beranda');
+$routes->get('/surat_usaha', 'Main::usaha');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
