@@ -20,7 +20,7 @@
                 <div class="row">
                     <center>
                         <div class="header p-3" style="width:60%; color:black; background-color:#b78a02; border-radius: 10px;">
-                            <h2>Surat Keterangan Usaha</h2>
+                            <h2>Surat Keterangan Pernyataan Domisili</h2>
                         </div>
                     </center>
                     <div class="col">
@@ -29,29 +29,29 @@
                                 <td>Nama</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:350px; border-radius:4px;"></td>
                             </tr>
                             <tr>
-                                <td>NIK</td>
+                                <td>Alamat Sesuai KTP</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:350px; border-radius:4px;"></td>
                             </tr>
                         </table>
                     </div>
                     <div class="col">
                         <table>
                             <tr>
-                                <td>Alamat</td>
+                                <td>NIK</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:350px; border-radius:4px;"></td>
                             </tr>
                             <tr>
-                                <td>Nama/Jenis Usaha</td>
+                                <td>Alamat Domisili</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:350px; border-radius:4px;"></td>
                             </tr>
                         </table>
                     </div>
@@ -61,7 +61,7 @@
                         <td>Keterangan</td>
                     </tr>
                     <tr>
-                        <td><textarea name="" id="" cols="153" rows="5" style="border-radius:4px;"></textarea></td>
+                        <td><textarea name="" id="" cols="133" rows="5" style="border-radius:4px;"></textarea></td>
                     </tr>
                 </table>
                 <button type="submit" style="width: 15%; height:40px; border-radius:4px; background-color:#b78a02; border:none; color:white;">Submit</button>

@@ -6,7 +6,10 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="img/gilangharjo2.jpg" style="width:100%; height: 600px;" alt="...">
-            <div class="centered" style="color:white; font-size:large; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">TRANSFORMASI DIGITAL KALURAHAN
+            <div class="centered" style="color:white; font-size:large; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <center>
+                    <p>TRANSFORMASI DIGITAL KALURAHAN</p>
+                </center>
                 <p>Perluas Jangkauan, Lakukan Percepatan Pelayanan untuk Masyarakat</p>
             </div>
         </div>
@@ -28,7 +31,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_usaha') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -41,7 +44,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_domisili_usaha') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -54,7 +57,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_sktm') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -67,7 +70,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_penghasilan') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -80,7 +83,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_bedaidentitas') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -93,7 +96,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_ktp') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -106,7 +109,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_kematian') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -119,7 +122,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_kelahiran') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -132,7 +135,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_skck') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -145,7 +148,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_kehilangan') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -158,7 +161,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_domisili') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
@@ -171,7 +174,7 @@
             </div>
             <div class="col">
                 <div class="card h-80">
-                    <a href="" style="text-decoration: none; color:black;">
+                    <a href="<?= base_url('surat_keterangan') ?>" style="text-decoration: none; color:black;">
                         <center>
                             <img src="img/icon-surat.png" style="width:30%;" class="card-img-top" alt="...">
                         </center>
