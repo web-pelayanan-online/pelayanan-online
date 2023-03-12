@@ -41,7 +41,18 @@ $routes->post('login', 'AuthController::login');
 
 $routes->get('/beranda', 'Main::beranda');
 $routes->get('/surat_usaha', 'Main::usaha');
-
+$routes->get('/surat_domisili_usaha', 'Main::domusaha');
+$routes->get('/surat_sktm', 'Main::sktm');
+$routes->get('/surat_penghasilan', 'Main::penghasilan');
+$routes->get('/surat_bedaidentitas', 'Main::bedaidentitas');
+$routes->get('/surat_ktp', 'Main::ktp');
+$routes->get('/surat_kematian', 'Main::kematian');
+$routes->get('/surat_kelahiran', 'Main::kelahiran');
+$routes->get('/surat_skck', 'Main::skck');
+$routes->get('/surat_kehilangan', 'Main::kehilangan');
+$routes->get('/surat_domisili', 'Main::domisili');
+$routes->get('/surat_keterangan', 'Main::keterangan');
+$routes->get('/kontak', 'Main::kontak');
 
 /*
  * --------------------------------------------------------------------
