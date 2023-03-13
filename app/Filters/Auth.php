@@ -39,7 +39,8 @@ class Auth implements FilterInterface
                 'status' => false,
                 'message' => 'Akses Ditolak'
             ]);
-            return $response->setStatusCode(ResponseInterface::HTTP_UNAUTHORIZED);
+            // return $response->setStatusCode(ResponseInterface::HTTP_UNAUTHORIZED);
+            return redirect()->to(base_url() . "auth");
         }
 
         try {
@@ -53,7 +54,8 @@ class Auth implements FilterInterface
                 'message' => "Token invalid: " . $e->getMessage()
             ]);
 
-            return $response->setStatusCode(ResponseInterface::HTTP_UNAUTHORIZED);
+            // return $response->setStatusCode(ResponseInterface::HTTP_UNAUTHORIZED);
+            return redirect()->to(base_url() . "auth");
         }
     }
 

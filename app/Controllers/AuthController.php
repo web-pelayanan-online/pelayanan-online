@@ -16,7 +16,7 @@ class AuthController extends BaseController
         helper("cookie");
     }
 
-    public function index()
+    public function register()
     {
         $rules = [
             "username" => "required",
@@ -43,10 +43,8 @@ class AuthController extends BaseController
             $userModel->save($userData);
 
             $response = [
-                'status' => 200,
-                'success' => 200,
+                'status' => true,
                 'message' => 'Akun berhasil dibuat',
-                'data' => []
             ];
             return $this->respond($response, 200);
         } else {
@@ -79,13 +77,12 @@ class AuthController extends BaseController
         if (!$this->validate($rules, $messages)) return $this->fail($this->validator->getErrors());
 
         $userData = $userModel->where('username', $this->request->getVar('username'))->first();
-        if (!$userData) return $this->failNotFound('Username atau kata sandi salah');
+        if (!$userData) return redirect()->to(base_url() . "auth");
 
         $verifyPass = password_verify($this->request->getVar('password'), $userData['password']);
-        if (!$verifyPass) {
-            return $this->fail('Username atau kata sandi salah');
-        }
+        if (!$verifyPass) return redirect()->to(base_url() . "auth");
 
+        // JWT AUTHENTICATION
         $key = getenv('TOKEN_SECRET');
         $iat = time();
 
@@ -98,9 +95,9 @@ class AuthController extends BaseController
 
         $token = JWT::encode($payload, $key, 'HS256');
 
-        $response = [
-            'data' => [$token]
-        ];
+        // $response = [
+        //     'data' => [$token]
+        // ];
 
         setcookie("access_token", $token, time() + 60 * 60, '/');
         return redirect()->to(base_url() . "admin_dashboard");

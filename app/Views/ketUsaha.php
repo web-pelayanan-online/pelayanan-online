@@ -16,7 +16,7 @@
 <div class="container">
     <div class="form">
         <center>
-            <form class="data" action="" style="padding:15px;">
+            <form action="<?= base_url('/pengajuan/surat_usaha'); ?>" method="post" class="data" style="padding:15px;">
                 <div class="row">
                     <center>
                         <div class="header p-3" style="width:60%; color:black; background-color:#b78a02; border-radius: 10px;">
@@ -25,17 +25,18 @@
                     </center>
                     <div class="col">
                         <table>
+                            <input type="hidden" name="nama_surat" value="Surat Keterangan Usaha">
                             <tr>
                                 <td>Nama</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:500px; border-radius:4px;" name="nama_pemohon"></td>
                             </tr>
                             <tr>
                                 <td>NIK</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:500px; border-radius:4px;" name="nik_pemohon"></td>
                             </tr>
                         </table>
                     </div>
@@ -45,13 +46,13 @@
                                 <td>Alamat</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:500px; border-radius:4px;" name="alamat_pemohon"></td>
                             </tr>
                             <tr>
                                 <td>Nama/Jenis Usaha</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:500px; border-radius:4px;" name="nama_data"></td>
                             </tr>
                         </table>
                     </div>
@@ -61,7 +62,7 @@
                         <td>Keterangan</td>
                     </tr>
                     <tr>
-                        <td><textarea name="" id="" cols="153" rows="5" style="border-radius:4px;"></textarea></td>
+                        <td><textarea name="keterangan" id="" cols="153" rows="5" style="border-radius:4px;"></textarea></td>
                     </tr>
                 </table>
                 <button type="submit" style="width: 15%; height:40px; border-radius:4px; background-color:#b78a02; border:none; color:white;">Submit</button>
