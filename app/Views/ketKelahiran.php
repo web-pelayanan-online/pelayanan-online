@@ -16,7 +16,7 @@
 <div class="container">
     <div class="form">
         <center>
-            <form class="data" action="" style="padding:15px;">
+            <form action="<?= base_url('/pengajuan/surat_kelahiran'); ?>" method="post" class="data" style="padding:15px;">
                 <div class="row">
                     <center>
                         <div class="header p-3" style="width:60%; color:black; background-color:#b78a02; border-radius: 10px;">
@@ -25,11 +25,12 @@
                     </center>
                     <div class="col">
                         <table>
+                            <input type="hidden" name="nama_surat" value="Surat Keterangan Kelahiran">
                             <tr>
                                 <td>Nama Pelapor</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_pemohon"></td>
                             </tr>
                         </table>
                     </div>
@@ -39,7 +40,7 @@
                                 <td>Alamat</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_pemohon"></td>
                             </tr>
                         </table>
                     </div>
@@ -49,7 +50,7 @@
                                 <td>NIK</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="nik_pemohon"></td>
                             </tr>
                         </table>
                     </div>
@@ -62,19 +63,19 @@
                                 <td>Hari/Tanggal/Jam</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="tanggal"></td>
                             </tr>
                             <tr>
                                 <td>Nama Bayi</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_data"></td>
                             </tr>
                             <tr>
                                 <td>Hubungan Pelapor Dengan Bayi</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="hubungan"></td>
                             </tr>
                         </table>
                     </div>
@@ -84,7 +85,7 @@
                                 <td>Tempat Kelahiran</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="tempat"></td>
                             </tr>
                             <tr>
                             <tr>
@@ -102,7 +103,7 @@
                                 <td>Anak Ke -</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="anak_ke"></td>
                             </tr>
                         </table>
                     </div>
@@ -115,7 +116,7 @@
                                 <td>Nama Ayah</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ayah"></td>
                             </tr>
                         </table>
                     </div>
@@ -125,7 +126,7 @@
                                 <td>Nama Ibu</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;"></td>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ibu"></td>
                             </tr>
                         </table>
                     </div>
