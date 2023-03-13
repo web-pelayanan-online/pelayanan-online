@@ -89,7 +89,7 @@ class SuratController extends BaseController
                 'status' => true,
                 'message' => 'Pengajuan berhasil ditambahkan',
             ];
-            return redirect()->to(base_url() . "beranda");
+            return redirect()->to("https://api.whatsapp.com/send?phone=+6285729982887&text=test");
         } else {
             $response = [
                 'status' => false,
