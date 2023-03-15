@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Firebase\JWT\JWT;
+use App\Models\Surat;
 
 class Admin extends BaseController
 {
@@ -25,6 +26,9 @@ class Admin extends BaseController
 
     public function verifikasi()
     {
-        return view('admin_verifikasi');
+        $suratModel = new Surat;
+
+        $data['surat'] = $suratModel->findAll();
+        return view('admin_verifikasi', $data);
     }
 }

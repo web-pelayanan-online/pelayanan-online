@@ -158,12 +158,12 @@
                                 <th style="width: 20%">
                                     Nama Surat
                                 </th>
-                                <th>
+                                <!-- <th>
                                     Pedukuhan
                                 </th>
                                 <th style="width: 20%">
                                     Nomor Handphone
-                                </th>
+                                </th> -->
                                 <th style="width:15%" class="text-center">
                                     Status
                                 </th>
@@ -171,35 +171,43 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    1
-                                </td>
-                                <td>
-                                    Muhammad Syafiq Akmal
-                                </td>
-                                <td>
-                                    Surat Ijin Buka Usaha
-                                </td>
-                                <td>
+                            <?php
+                            $nomor = 0;
+                            foreach ($surat as $row) :
+                                $nomor++;
+                            ?>
+                                <tr>
+                                    <td>
+                                        <?= $nomor ?>
+                                    </td>
+                                    <td>
+                                        <?= $row['nama_pemohon'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $row['nama_surat'] ?>
+                                    </td>
+                                    <!-- <td>
                                     Gunting
                                 </td>
                                 <td>
                                     +62812345690
-                                </td>
-                                <td class="project-actions text-right">
-                                    <a class="btn btn-primary btn-sm" href="#">
-                                        <i class="fas fa-folder">
-                                        </i>
-                                        Terima
-                                    </a>
-                                    <a class="btn btn-danger btn-sm" href="#">
-                                        <i class="fas fa-trash">
-                                        </i>
-                                        Batal
-                                    </a>
-                                </td>
-                            </tr>
+                                </td> -->
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            Terima
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Batal
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php
+                            endforeach;
+                            ?>
                         </tbody>
                     </table>
                 </div>
