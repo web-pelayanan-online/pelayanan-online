@@ -63,7 +63,7 @@
                                 <td>Hari/Tanggal/Jam</td>
                             </tr>
                             <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="tanggal"></td>
+                                <td><input type="datetime-local" id="" name="tanggal" style="width:300px; border-radius:4px;"></td>
                             </tr>
                             <tr>
                                 <td>Nama Bayi</td>
