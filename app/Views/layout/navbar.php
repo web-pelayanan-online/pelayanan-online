@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg" style="background-color:#b78a02;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?= base_url() ?>">
+        <a class="navbar-brand" href="<?= base_url('beranda') ?>">
             <img src="img/Bantul.png" style="width: 3%;" alt="">
             Kalurahan Gilangharjo
         </a>
