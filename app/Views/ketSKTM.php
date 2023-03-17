@@ -57,22 +57,10 @@
                 </div>
                 <table>
                     <tr>
-                        <td>Alamat Usaha</td>
-                    </tr>
-                    <tr>
-                        <td><textarea name="alamat_data" id="" cols="153" rows="5" style="border-radius:4px;"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>Keterangan Usaha</td>
+                        <td>Keterangan</td>
                     </tr>
                     <tr>
                         <td><textarea name="keterangan" id="" cols="153" rows="5" style="border-radius:4px;"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>Keperluan</td>
-                    </tr>
-                    <tr>
-                        <td><textarea name="keperluan" id="" cols="153" rows="5" style="border-radius:4px;"></textarea></td>
                     </tr>
                 </table>
                 <button type="submit" style="width: 15%; height:40px; border-radius:4px; background-color:#b78a02; border:none; color:white;">Submit</button>
