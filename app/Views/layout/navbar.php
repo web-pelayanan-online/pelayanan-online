@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg" style="background-color:#b78a02;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?= base_url('beranda') ?>">
+        <a class="navbar-brand" href="<?= base_url() ?>">
             <img src="img/Bantul.png" style="width: 3%;" alt="">
             Kalurahan Gilangharjo
         </a>
@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?= base_url('beranda') ?>">Beranda</a>
+                    <a class="nav-link" aria-current="page" href="<?= base_url() ?>">Beranda</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

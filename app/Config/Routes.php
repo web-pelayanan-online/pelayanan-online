@@ -35,6 +35,7 @@ $routes->post('/login', 'AuthController::login');
 $routes->get('/logout', 'AuthController::logout');
 
 // ADMIN
+$routes->get('/surat/(:any)', 'Admin::detail/$1', ['filter' => 'auth']);
 $routes->get('/admin_dashboard', 'Admin::dashboard', ['filter' => 'auth']);
 $routes->get('/admin_verifikasi', 'Admin::verifikasi', ['filter' => 'auth']);
 $routes->get('/admin_usaha', 'Admin::adminusaha', ['filter' => 'auth']);
@@ -53,8 +54,8 @@ $routes->get('/admin_keterangan', 'Admin::adminketerangan', ['filter' => 'auth']
 
 $routes->post('/pengajuan/(:segment)', 'SuratController::pengajuan/$1');
 
-// USER
-$routes->get('/beranda', 'Main::beranda');
+
+$routes->get('/', 'Main::beranda');
 $routes->get('/surat_usaha', 'Main::usaha');
 $routes->get('/surat_domisili_usaha', 'Main::domusaha');
 $routes->get('/surat_sktm', 'Main::sktm');
