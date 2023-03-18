@@ -130,13 +130,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Surat Keterangan Kelahiran</h1>
+                            <h1 class="m-0">Surat Keterangan Pernyataan Domisili</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_dashboard">Beranda</a></li>
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_verifikasi">Verifikasi Surat</a></li>
-                                <li class="breadcrumb-item active">Surat Keterangan Kelahiran</li>
+                                <li class="breadcrumb-item active">Surat Keterangan Pernyataan Domisili</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -147,122 +147,29 @@
             <!-- Main content -->
             <!-- Default box -->
             <div class="card p-3">
-                <div class="container">
-                    <div class="form">
-                        <center>
-                            <form action="<?= base_url('/pengajuan/surat_kelahiran'); ?>" method="post" class="data" style="padding:15px;">
-                                <div class="row">
-                                    <div class="col">
-                                        <table>
-                                            <input type="hidden" name="nama_surat" value="Surat Keterangan Kelahiran">
-                                            <tr>
-                                                <td>Nama Pelapor</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_pemohon"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col">
-                                        <table>
-                                            <tr>
-                                                <td>Alamat</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_pemohon"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col">
-                                        <table>
-                                            <tr>
-                                                <td>NIK</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nik_pemohon"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <p>Data Kelahiran: </p>
-                                <div class="row">
-                                    <div class="col">
-                                        <table>
-                                            <tr>
-                                                <td>Hari/Tanggal/Jam</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="datetime-local" id="" name="tanggal" style="width:300px; border-radius:4px;"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Nama Bayi</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_data"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Hubungan Pelapor Dengan Bayi</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="hubungan"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col">
-                                        <table>
-                                            <tr>
-                                                <td>Tempat Kelahiran</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="tempat"></td>
-                                            </tr>
-                                            <tr>
-                                            <tr>
-                                                <td>Jenis Kelamin Bayi</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <select name="jenis_kelamin" id="" style="width:300px; border-radius:4px;">
-                                                        <option value="1">Laki-Laki</option>
-                                                        <option value="2">Perempuan</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Anak Ke -</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="anak_ke"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <p>Data Orang Tua: </p>
-                                <div class="row">
-                                    <div class="col">
-                                        <table>
-                                            <tr>
-                                                <td>Nama Ayah</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ayah"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col">
-                                        <table>
-                                            <tr>
-                                                <td>Nama Ibu</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ibu"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </form>
-                        </center>
-                    </div>
+                <div class="card-body p-0">
+                    <table class="table table-striped projects">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NIK</th>
+                                <th>Alamat Sesuai KTP</th>
+                                <th>Alamat Domisili</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><?= $nama_pemohon ?></td>
+                                <td><?= $nik_pemohon ?></td>
+                                <td><?= $alamat_data ?></td>
+                                <td><?= $alamat_pemohon ?></td>
+                                <td><?= $keterangan ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <!-- /.card-body -->
             </div>

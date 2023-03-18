@@ -14,6 +14,17 @@ class SuratController extends BaseController
     {
     }
 
+    public function show($id = null)
+    {
+        $suratModel = new Surat;
+        $data = $suratModel->where('surat_id', $id)->first();
+        if ($data) {
+            return $this->respond($data);
+        } else {
+            return $this->failNotFound('Data voucher tidak ditemukan');
+        }
+    }
+
     public function pengajuan($url = null)
     {
         $rules = [

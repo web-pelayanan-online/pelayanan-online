@@ -130,13 +130,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Surat Keterangan Tidak Mampu</h1>
+                            <h1 class="m-0">Verifikasi Surat</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_dashboard">Beranda</a></li>
-                                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_verifikasi">Verifikasi Surat</a></li>
-                                <li class="breadcrumb-item active">Surat Keterangan Tidak Mampu</li>
+                                <li class="breadcrumb-item active">Verifikasi Surat</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -151,22 +150,53 @@
                     <table class="table table-striped projects">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>NIK</th>
-                                <th>Keterangan</th>
+                                <th style="width: 1%">
+                                    No.
+                                </th>
+                                <th style="width: 20%">
+                                    Nama Pemohon
+                                </th>
+                                <th style="width: 20%">
+                                    Nama Surat
+                                </th>
+                                <th style="width:15%" class="text-center">
+                                    Status
+                                </th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>osahfljnasf</td>
-                                <td>aslkflkansf</td>
-                                <td>aoshflanfa</td>
-                                <td>aslbfnlaskndf</td>
-                            </tr>
+                            <?php
+                            $nomor = 0;
+                            foreach ($surat as $row) :
+                                $nomor++;
+                            ?>
+                                <tr>
+                                    <td>
+                                        <?= $nomor ?>
+                                    </td>
+                                    <td>
+                                        <?= $row['nama_pemohon'] ?>
+                                    </td>
+                                    <td>
+                                        <a href="surat/<?= $row['surat_id'] ?>"><?= $row['nama_surat'] ?></a>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" href="#">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            Terima
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Batal
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php
+                            endforeach;
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -175,8 +205,6 @@
             <!-- /.card -->
             <!-- /.content -->
         </div>
-
-        <!-- Surat Keterangan -->
 
         <!-- /.content-wrapper -->
         <footer class="main-footer">
@@ -219,6 +247,7 @@
         <!-- AdminLTE App -->
         <script src="dist/js/adminlte.js"></script>
         <script src="dist/js/pages/dashboard.js"></script>
+        <script src="js/adminVerifikasi.js"></script>
 </body>
 
 </html>
