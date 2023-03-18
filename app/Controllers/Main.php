@@ -8,71 +8,71 @@ class Main extends BaseController
 
     public function beranda()
     {
-        return view('beranda');
+        return view('user/beranda');
     }
 
     public function usaha()
     {
-        return view('ketUsaha');
+        return view('user/ketUsaha');
     }
 
     public function domUsaha()
     {
-        return view('ketDomUsaha');
+        return view('user/ketDomUsaha');
     }
 
     public function sktm()
     {
-        return view('ketSKTM');
+        return view('user/ketSKTM');
     }
 
     public function penghasilan()
     {
-        return view('ketPengahsilan');
+        return view('user/ketPengahsilan');
     }
 
     public function bedaidentitas()
     {
-        return view('ketBedaIdentitas');
+        return view('user/ketBedaIdentitas');
     }
 
     public function ktp()
     {
-        return view('ketKtp');
+        return view('user/ketKtp');
     }
 
     public function kematian()
     {
-        return view('ketKematian');
+        return view('user/ketKematian');
     }
 
     public function kelahiran()
     {
-        return view('ketKelahiran');
+        return view('user/ketKelahiran');
     }
 
     public function skck()
     {
-        return view('ketSkck');
+        return view('user/ketSkck');
     }
 
     public function kehilangan()
     {
-        return view('ketKehilangan');
+        return view('user/ketKehilangan');
     }
 
     public function domisili()
     {
-        return view('ketDomisili');
+        return view('user/ketDomisili');
     }
 
     public function keterangan()
     {
-        return view('suratKeterangan');
+        return view('user/suratKeterangan');
     }
 
     public function kontak()
     {
-        return view('kontak');
+        return view('user/kontak');
     }
 }

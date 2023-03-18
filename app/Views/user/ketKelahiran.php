@@ -16,18 +16,18 @@
 <div class="container">
     <div class="form">
         <center>
-            <form action="<?= base_url('/pengajuan/surat_kematian'); ?>" method="post" class="data" style="padding:15px;">
+            <form action="<?= base_url('/pengajuan/surat_kelahiran'); ?>" method="post" class="data" style="padding:15px;">
                 <div class="row">
                     <center>
                         <div class="header p-3" style="width:60%; color:black; background-color:#b78a02; border-radius: 10px;">
-                            <h2>Surat Keterangan Kematian</h2>
+                            <h2>Surat Keterangan Kelahiran</h2>
                         </div>
                     </center>
                     <div class="col">
                         <table>
-                            <input type="hidden" name="nama_surat" value="Surat Keterangan Kematian">
+                            <input type="hidden" name="nama_surat" value="Surat Keterangan Kelahiran">
                             <tr>
-                                <td>Nama</td>
+                                <td>Nama Pelapor</td>
                             </tr>
                             <tr>
                                 <td><input type="text" style="width:300px; border-radius:4px;" name="nama_pemohon"></td>
@@ -55,107 +55,78 @@
                         </table>
                     </div>
                 </div>
-                <p>Data Yang Meninggal: </p>
+                <p>Data Kelahiran: </p>
                 <div class="row">
                     <div class="col">
                         <table>
                             <tr>
-                                <td>Nama dan Alias</td>
+                                <td>Hari/Tanggal/Jam</td>
+                            </tr>
+                            <tr>
+                                <td><input type="datetime-local" id="" name="tanggal" style="width:300px; border-radius:4px;"></td>
+                            </tr>
+                            <tr>
+                                <td>Nama Bayi</td>
                             </tr>
                             <tr>
                                 <td><input type="text" style="width:300px; border-radius:4px;" name="nama_data"></td>
                             </tr>
                             <tr>
-                                <td>Jenis Kelamin</td>
+                                <td>Hubungan Pelapor Dengan Bayi</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="hubungan"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col">
+                        <table>
+                            <tr>
+                                <td>Tempat Kelahiran</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="tempat"></td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>Jenis Kelamin Bayi</td>
                             </tr>
                             <tr>
                                 <td>
                                     <select name="jenis_kelamin" id="" style="width:300px; border-radius:4px;">
-                                        <option value="1">Laki-Laki</option>
-                                        <option value="2">Perempuan</option>
+                                        <option value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
                                     </select>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>Anak Ke -</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" style="width:300px; border-radius:4px;" name="anak_ke"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p>Data Orang Tua: </p>
+                <div class="row">
+                    <div class="col">
+                        <table>
                             <tr>
                                 <td>Nama Ayah</td>
                             </tr>
                             <tr>
                                 <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ayah"></td>
                             </tr>
-                            <tr>
-                                <td>Alamat</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_data"></td>
-                            </tr>
                         </table>
                     </div>
                     <div class="col">
                         <table>
-                            <tr>
-                                <td>Umur</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="umur"></td>
-                            </tr>
-                            <tr>
-                            <tr>
-                                <td>Agama</td>
-                            </tr>
-                            <td>
-                                <select name="agama" id="" style="width:300px; border-radius:4px;">
-                                    <option value="1">Islam</option>
-                                    <option value="2">Katholik</option>
-                                    <option value="3">Protestan</option>
-                                    <option value="4">Budha</option>
-                                    <option value="5">Hindu</option>
-                                    <option value="6">Konghucu</option>
-                                </select>
-                            </td>
-                            </tr>
                             <tr>
                                 <td>Nama Ibu</td>
                             </tr>
                             <tr>
                                 <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ibu"></td>
-                            </tr>
-                            <tr>
-                                <td>Hari/Tanggal/Jam</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="tanggal"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Tempat Meninggal</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="tempat"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Penyebab Kematian</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="penyebab"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Hubungan Pelapor Dengan Yang Meninggal</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="hubungan"></td>
                             </tr>
                         </table>
                     </div>

@@ -50,7 +50,7 @@
                         </center>
                         <hr>
                         <div class="card-body">
-                            <h5 class="card-title">Surat Keterangan Domisili</h5>
+                            <h5 class="card-title">Surat Keterangan Domisili Usaha</h5>
                         </div>
                     </a>
                 </div>

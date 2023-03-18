@@ -7,6 +7,7 @@
     <title>Verifikasi Surat | Kelurahan Gilangharjo</title>
 
     <link rel="icon" type="image/png" href="img/Bantul.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -129,12 +130,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Verifikasi Surat</h1>
+                            <h1 class="m-0">Surat Keterangan Beda Identitas</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_dashboard">Beranda</a></li>
-                                <li class="breadcrumb-item active">Verifikasi Surat</li>
+                                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_verifikasi">Verifikasi Surat</a></li>
+                                <li class="breadcrumb-item active">Surat Keterangan Beda Identitas</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -149,65 +151,25 @@
                     <table class="table table-striped projects">
                         <thead>
                             <tr>
-                                <th style="width: 1%">
-                                    No.
-                                </th>
-                                <th style="width: 20%">
-                                    Nama Pemohon
-                                </th>
-                                <th style="width: 20%">
-                                    Nama Surat
-                                </th>
-                                <!-- <th>
-                                    Pedukuhan
-                                </th>
-                                <th style="width: 20%">
-                                    Nomor Handphone
-                                </th> -->
-                                <th style="width:15%" class="text-center">
-                                    Status
-                                </th>
-
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>NIK</th>
+                                <th>Identitas dalam (Nama Kartu)</th>
+                                <th>Nomor Identitas</th>
+                                <th>Perbedaan</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            $nomor = 0;
-                            foreach ($surat as $row) :
-                                $nomor++;
-                            ?>
-                                <tr>
-                                    <td>
-                                        <?= $nomor ?>
-                                    </td>
-                                    <td>
-                                        <?= $row['nama_pemohon'] ?>
-                                    </td>
-                                    <td>
-                                        <?= $row['nama_surat'] ?>
-                                    </td>
-                                    <!-- <td>
-                                    Gunting
-                                </td>
-                                <td>
-                                    +62812345690
-                                </td> -->
-                                    <td class="project-actions text-right">
-                                        <a class="btn btn-primary btn-sm" href="#">
-                                            <i class="fas fa-folder">
-                                            </i>
-                                            Terima
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
-                                            <i class="fas fa-trash">
-                                            </i>
-                                            Batal
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php
-                            endforeach;
-                            ?>
+                            <tr>
+                                <td>1</td>
+                                <td><?= $nama_pemohon ?></td>
+                                <td><?= $alamat_pemohon ?></td>
+                                <td><?= $nik_pemohon ?></td>
+                                <td><?= $identitas_kartu ?></td>
+                                <td><?= $nomor_identitas ?></td>
+                                <td><?= $perbedaan ?></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -216,6 +178,9 @@
             <!-- /.card -->
             <!-- /.content -->
         </div>
+
+        <!-- Surat Keterangan -->
+
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <strong style="color:orange;">Copyright &copy; 2023 KKN UAD 101 X Kelurahan Gilangharjo</strong>
@@ -230,6 +195,9 @@
     </div>
     <!-- ./wrapper -->
 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
