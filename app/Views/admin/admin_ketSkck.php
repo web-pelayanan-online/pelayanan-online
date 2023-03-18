@@ -130,13 +130,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Surat Keterangan Usaha</h1>
+                            <h1 class="m-0">Surat Keterangan Pengantar SKCK</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_dashboard">Beranda</a></li>
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_verifikasi">Verifikasi Surat</a></li>
-                                <li class="breadcrumb-item active">Surat Keterangan Usaha</li>
+                                <li class="breadcrumb-item active">Surat Keterangan Pengantar SKCK</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -151,44 +151,21 @@
                     <table class="table table-striped projects">
                         <thead>
                             <tr>
-                                <th style="width: 1%">
-                                    No
-                                </th>
-                                <th style="width: 20%">
-                                    Nama
-                                </th>
-                                <th style="width: 20%">
-                                    NIK
-                                </th>
-                                <th style="width: 20%">
-                                    Alamat
-                                </th>
-                                <th style="width: 20%">
-                                    Nama/Jenis Usaha
-                                </th>
-                                <th style="width:15%">
-                                    Keterangan
-                                </th>
-
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>NIK</th>
+                                <th>Keperluan</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            $nomor = 0;
-                            foreach ($surat as $row) :
-                                $nomor++;
-                            ?>
-                                <tr>
-                                    <td><?= $nomor ?></td>
-                                    <td><?= $row['nama_pemohon'] ?></td>
-                                    <td><?= $row['nik_pemohon'] ?></td>
-                                    <td><?= $row['alamat_pemohon'] ?></td>
-                                    <td><?= $row['nama_data'] ?></td>
-                                    <td><?= $row['keterangan'] ?></td>
-                                </tr>
-                            <?php
-                            endforeach;
-                            ?>
+                            <tr>
+                                <td>1</td>
+                                <td><?= $nama_pemohon ?></td>
+                                <td><?= $alamat_pemohon ?></td>
+                                <td><?= $nik_pemohon ?></td>
+                                <td><?= $keperluan ?></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

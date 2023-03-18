@@ -130,13 +130,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Surat Keterangan Penghasilan</h1>
+                            <h1 class="m-0">Surat Keterangan Pengantar Kehilangan</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_dashboard">Beranda</a></li>
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_verifikasi">Verifikasi Surat</a></li>
-                                <li class="breadcrumb-item active">Surat Keterangan Penghasilan</li>
+                                <li class="breadcrumb-item active">Surat Keterangan Pengantar Kehilangan</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -151,39 +151,28 @@
                     <table class="table table-striped projects">
                         <thead>
                             <tr>
-                                <th style="width: 1%">
-                                    No
-                                </th>
-                                <th style="width: 20%">
-                                    Nama
-                                </th>
-                                <th style="width: 20%">
-                                    Alamat
-                                </th>
-                                <th style="width: 20%">
-                                    NIK
-                                </th>
-                                <th style="width: 20%">
-                                    Jumlah Tanggungan Anak
-                                </th>
-                                <th style="width:15%">
-                                    Keterangan Usaha
-                                </th>
-                                <th style="width:15%">
-                                    Keperluan
-                                </th>
-
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>NIK</th>
+                                <th>Hari/Tanggal/Jam</th>
+                                <th>Tempat Kehilangan</th>
+                                <th>Nama Barang Hilang</th>
+                                <th>Ciri-Ciri Barang</th>
+                                <th>Keterangan Kejadian</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>osahfljnasf</td>
-                                <td>aslkflkansf</td>
-                                <td>aoshflanfa</td>
-                                <td>aslbfnlaskndf</td>
-                                <td>safnlkasnf</td>
-                                <td>safnlkasnf</td>
+                                <td><?= $nama_pemohon ?></td>
+                                <td><?= $alamat_pemohon ?></td>
+                                <td><?= $nik_pemohon ?></td>
+                                <td><?= $tanggal ?></td>
+                                <td><?= $tempat ?></td>
+                                <td><?= $nama_data ?></td>
+                                <td><?= $ciri_ciri ?></td>
+                                <td><?= $keterangan ?></td>
                             </tr>
                         </tbody>
                     </table>

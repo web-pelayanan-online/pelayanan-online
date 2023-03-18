@@ -130,13 +130,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Surat Keterangan Pengantar SKCK</h1>
+                            <h1 class="m-0">Surat Keterangan Penghasilan</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_dashboard">Beranda</a></li>
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_verifikasi">Verifikasi Surat</a></li>
-                                <li class="breadcrumb-item active">Surat Keterangan Pengantar SKCK</li>
+                                <li class="breadcrumb-item active">Surat Keterangan Penghasilan</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -151,20 +151,39 @@
                     <table class="table table-striped projects">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>NIK</th>
-                                <th>Keperluan</th>
+                                <th style="width: 1%">
+                                    No
+                                </th>
+                                <th style="width: 20%">
+                                    Nama
+                                </th>
+                                <th style="width: 20%">
+                                    Alamat
+                                </th>
+                                <th style="width: 20%">
+                                    NIK
+                                </th>
+                                <th style="width: 20%">
+                                    Jumlah Tanggungan Anak
+                                </th>
+                                <th style="width:15%">
+                                    Keterangan Usaha
+                                </th>
+                                <th style="width:15%">
+                                    Keperluan
+                                </th>
+
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>osahfljnasf</td>
-                                <td>aslkflkansf</td>
-                                <td>aoshflanfa</td>
-                                <td>aslbfnlaskndf</td>
+                                <td><?= $nama_pemohon ?></td>
+                                <td><?= $alamat_pemohon ?></td>
+                                <td><?= $nik_pemohon ?></td>
+                                <td><?= $jml_tanggungan_anak ?></td>
+                                <td><?= $keterangan ?></td>
+                                <td><?= $keperluan ?></td>
                             </tr>
                         </tbody>
                     </table>

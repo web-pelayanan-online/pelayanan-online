@@ -31,7 +31,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    < class="wrapper">
+    <div class="wrapper">
 
         <!-- Preloader -->
         <!-- <div class="preloader flex-column justify-content-center align-items-center">
@@ -159,7 +159,7 @@
                                                 <td>Nama</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_pemohon"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_pemohon" value="<?= $nama_pemohon ?>" disabled></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -169,7 +169,7 @@
                                                 <td>Alamat</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_pemohon"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_pemohon" value="<?= $alamat_pemohon ?>" disabled></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -179,7 +179,7 @@
                                                 <td>NIK</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nik_pemohon"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nik_pemohon" value="<?= $nik_pemohon ?>" disabled></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -192,30 +192,25 @@
                                                 <td>Nama dan Alias</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_data"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_data" value="<?= $nama_data ?>" disabled></td>
                                             </tr>
                                             <tr>
                                                 <td>Jenis Kelamin</td>
                                             </tr>
                                             <tr>
-                                                <td>
-                                                    <select name="jenis_kelamin" id="" style="width:300px; border-radius:4px;">
-                                                        <option value="1">Laki-Laki</option>
-                                                        <option value="2">Perempuan</option>
-                                                    </select>
-                                                </td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="jenis_kelamin" value="<?= $jenis_kelamin ?>" disabled></td>
                                             </tr>
                                             <tr>
                                                 <td>Nama Ayah</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ayah"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ayah" value="<?= $nama_ayah ?>" disabled></td>
                                             </tr>
                                             <tr>
                                                 <td>Alamat</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_data"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_data" value="<?= $alamat_data ?>" disabled></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -225,35 +220,27 @@
                                                 <td>Umur</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="umur"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="umur" value="<?= $umur ?>" disabled></td>
                                             </tr>
                                             <tr>
                                             <tr>
                                                 <td>Agama</td>
                                             </tr>
-                                            <td>
-                                                <select name="agama" id="" style="width:300px; border-radius:4px;">
-                                                    <option value="1">Islam</option>
-                                                    <option value="2">Katholik</option>
-                                                    <option value="3">Protestan</option>
-                                                    <option value="4">Budha</option>
-                                                    <option value="5">Hindu</option>
-                                                    <option value="6">Konghucu</option>
-                                                </select>
-                                            </td>
+                                            <tr>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="agama" value="<?= $agama ?>" disabled></td>
                                             </tr>
                                             <tr>
                                                 <td>Nama Ibu</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ibu"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ibu" value="<?= $nama_ibu ?>" disabled></td>
                                             </tr>
                                             <tr>
                                                 <td>Hari/Tanggal/Jam</td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <input type="datetime-local" id="" name="tanggal" style="width:300px; border-radius:4px;">
+                                                    <input type="text" id="" name="tanggal" style="width:300px; border-radius:4px;" value="<?= $tanggal ?>" disabled>
                                                 </td>
                                             </tr>
                                         </table>
@@ -266,7 +253,7 @@
                                                 <td>Tempat Meninggal</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="tempat"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="tempat" value="<?= $tempat ?>" disabled></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -276,7 +263,7 @@
                                                 <td>Penyebab Kematian</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="penyebab"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="penyebab" value="<?= $penyebab ?>" disabled></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -286,7 +273,7 @@
                                                 <td>Hubungan Pelapor Dengan Yang Meninggal</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" style="width:300px; border-radius:4px;" name="hubungan" value="akmal"></td>
+                                                <td><input type="text" style="width:300px; border-radius:4px;" name="hubungan" value="<?= $hubungan ?>" disabled></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -314,36 +301,36 @@
             <!-- Control sidebar content goes here -->
         </aside>
         <!-- /.control-sidebar -->
-        </div>
-        <!-- ./wrapper -->
+    </div>
+    <!-- ./wrapper -->
 
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-        <!-- jQuery -->
-        <script src="plugins/jquery/jquery.min.js"></script>
-        <!-- jQuery UI 1.11.4 -->
-        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        <script>
-            $.widget.bridge('uibutton', $.ui.button)
-        </script>
-        <!-- Bootstrap 4 -->
-        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- Sparkline -->
-        <script src="plugins/sparklines/sparkline.js"></script>
-        <!-- daterangepicker -->
-        <script src="plugins/moment/moment.min.js"></script>
-        <script src="plugins/daterangepicker/daterangepicker.js"></script>
-        <!-- Tempusdominus Bootstrap 4 -->
-        <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-        <!-- Summernote -->
-        <script src="plugins/summernote/summernote-bs4.min.js"></script>
-        <!-- overlayScrollbars -->
-        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-        <!-- AdminLTE App -->
-        <script src="dist/js/adminlte.js"></script>
-        <script src="dist/js/pages/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+    <script src="dist/js/pages/dashboard.js"></script>
 </body>
 
 </html>

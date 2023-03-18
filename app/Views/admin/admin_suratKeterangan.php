@@ -130,13 +130,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Surat Keterangan Pernyataan Domisili</h1>
+                            <h1 class="m-0">Surat Keterangan</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_dashboard">Beranda</a></li>
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_verifikasi">Verifikasi Surat</a></li>
-                                <li class="breadcrumb-item active">Surat Keterangan Pernyataan Domisili</li>
+                                <li class="breadcrumb-item active">Surat Keterangan</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -152,21 +152,21 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama</th>
+                                <th>Nama Pelapor</th>
+                                <th>Alamat</th>
                                 <th>NIK</th>
-                                <th>Alamat Sesuai KTP</th>
-                                <th>Alamat Domisili</th>
                                 <th>Keterangan</th>
+                                <th>Keperluan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>osahfljnasf</td>
-                                <td>aslkflkansf</td>
-                                <td>aoshflanfa</td>
-                                <td>aslbfnlaskndf</td>
-                                <td>sa;fnlkasnf</td>
+                                <td><?= $nama_pemohon ?></td>
+                                <td><?= $alamat_pemohon ?></td>
+                                <td><?= $nik_pemohon ?></td>
+                                <td><?= $keterangan ?></td>
+                                <td><?= $keperluan ?></td>
                             </tr>
                         </tbody>
                     </table>
