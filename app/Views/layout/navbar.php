@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-lg" style="background-color:#b78a02;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?= base_url('beranda') ?>">
-            <img src="img/Bantul.png" style="width: 3%;" alt="">
+        <a class="navbar-brand" href="<?= base_url('') ?>">
+            <img src="img/Bantul.png" style="width: 30px;" alt="">
             Kalurahan Gilangharjo
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
