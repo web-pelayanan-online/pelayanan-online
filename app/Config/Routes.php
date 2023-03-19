@@ -35,28 +35,15 @@ $routes->post('/login', 'AuthController::login');
 $routes->get('/logout', 'AuthController::logout');
 
 // ADMIN
-$routes->get('/surat/(:any)', 'Admin::detail/$1', ['filter' => 'auth']);
 $routes->get('/admin_dashboard', 'Admin::dashboard', ['filter' => 'auth']);
 $routes->get('/admin_verifikasi', 'Admin::verifikasi', ['filter' => 'auth']);
-$routes->get('/admin_usaha', 'Admin::adminusaha', ['filter' => 'auth']);
-$routes->get('/admin_domusaha', 'Admin::admindomusaha', ['filter' => 'auth']);
-$routes->get('/admin_penghasilan', 'Admin::adminpenghasilan', ['filter' => 'auth']);
-$routes->get('/admin_sktm', 'Admin::adminsktm', ['filter' => 'auth']);
-$routes->get('/admin_bedaidentitas', 'Admin::adminbedaidentitas', ['filter' => 'auth']);
-$routes->get('/admin_ktp', 'Admin::adminktp', ['filter' => 'auth']);
-$routes->get('/admin_kematian', 'Admin::adminkematian', ['filter' => 'auth']);
-$routes->get('/admin_kelahiran', 'Admin::adminkelahiran', ['filter' => 'auth']);
-$routes->get('/admin_skck', 'Admin::adminskck', ['filter' => 'auth']);
-$routes->get('/admin_kehilangan', 'Admin::adminkehilangan', ['filter' => 'auth']);
-$routes->get('/admin_domisili', 'Admin::admindomisili', ['filter' => 'auth']);
-$routes->get('/admin_keterangan', 'Admin::adminketerangan', ['filter' => 'auth']);
 $routes->get('/admin_terima', 'Admin::terima', ['filter' => 'auth']);
 $routes->get('/admin_tolak', 'Admin::tolak', ['filter' => 'auth']);
+$routes->get('/surat/(:any)', 'Admin::detail/$1', ['filter' => 'auth']);
+$routes->get('/surat/(:segment)/(:num)', 'Admin::status/$1/$2', ['filter' => 'auth']);
 
-
+// USER
 $routes->post('/pengajuan/(:segment)', 'SuratController::pengajuan/$1');
-
-
 $routes->get('/', 'Main::beranda');
 $routes->get('/surat_usaha', 'Main::usaha');
 $routes->get('/surat_domisili_usaha', 'Main::domusaha');

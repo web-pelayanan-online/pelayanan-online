@@ -28,8 +28,46 @@ class Admin extends BaseController
     {
         $suratModel = new Surat;
 
-        $data['surat'] = $suratModel->findAll();
+        $data['surat'] = $suratModel->where('status_surat', 0)->findAll();
         return view('admin/admin_verifikasi', $data);
+    }
+
+    public function terima()
+    {
+        $suratModel = new Surat;
+
+        $data['surat'] = $suratModel->where('status_surat', 1)->findAll();
+        return view('admin/admin_terima', $data);
+    }
+
+    public function tolak()
+    {
+        $suratModel = new Surat;
+
+        $data['surat'] = $suratModel->where('status_surat', 2)->findAll();
+        return view('admin/admin_tolak', $data);
+    }
+
+    public function status($type = null, $id = null)
+    {
+        $suratModel = new Surat;
+
+        switch ($type) {
+            case 'terima':
+                $status = 1;
+                break;
+            case 'tolak':
+                $status = 2;
+                break;
+            default:
+                $status = 0;
+                break;
+        }
+
+        $suratData = ['status_surat' => $status];
+
+        $suratModel->update($id, $suratData);
+        return redirect()->to('admin_verifikasi');
     }
 
     public function detail($id = null)
@@ -89,15 +127,5 @@ class Admin extends BaseController
 
         $data['surat'] = $suratModel->findAll();
         return view('admin_ketUsaha', $data);
-    }
-
-    public function terima()
-    {
-        return view('admin/admin_terima');
-    }
-
-    public function tolak()
-    {
-        return view('admin/admin_tolak');
     }
 }

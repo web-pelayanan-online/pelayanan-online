@@ -15,7 +15,7 @@ class Surat extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'nama_surat', 'surat_id', 'nama_pemohon', 'alamat_pemohon', 'nik_pemohon',
+        'status_surat', 'nama_surat', 'surat_id', 'nama_pemohon', 'alamat_pemohon', 'nik_pemohon',
         'nama_data', 'alamat_data', 'keterangan', 'keperluan',
         'penghasilan', 'jml_tanggungan_anak', 'identitas_kartu',
         'nomor_identitas', 'perbedaan', 'umur', 'jenis_kelamin', 'agama',
