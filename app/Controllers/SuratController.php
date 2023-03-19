@@ -95,16 +95,16 @@ class SuratController extends BaseController
 
             $pesan = $judul . $suratID . $nama . $alamat . $nik;
 
-            $response = [
-                'status' => true,
-                'message' => 'Pengajuan berhasil ditambahkan',
-            ];
+            // $response = [
+            //     'status' => true,
+            //     'message' => 'Pengajuan berhasil ditambahkan',
+            // ];
             return redirect()->to("https://api.whatsapp.com/send?phone=+6285729982887&text=" . $pesan);
         } else {
-            $response = [
-                'status' => false,
-                'errors' => $this->validator->getErrors(),
-            ];
+            // $response = [
+            //     'status' => false,
+            //     'errors' => $this->validator->getErrors(),
+            // ];
 
             return redirect()->to(base_url() . $url);
         }

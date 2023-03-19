@@ -130,12 +130,12 @@
                                     <a href="surat/<?= $row['surat_id'] ?>" style="text-decoration: none;"><?= $row['nama_surat'] ?></a>
                                 </td>
                                 <td class="project-actions text-right">
-                                    <a class="btn btn-primary btn-sm" href="surat/terima/<?= $row['surat_id'] ?>">
+                                    <a class="btn btn-primary btn-sm" href="status/terima/<?= $row['surat_id'] ?>">
                                         <i class="fa fa-folder">
                                         </i>
                                         Terima
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="surat/tolak/<?= $row['surat_id'] ?>">
+                                    <a class="btn btn-danger btn-sm" href="status/tolak/<?= $row['surat_id'] ?>">
                                         <i class="fa fa-trash">
                                         </i>
                                         Batal

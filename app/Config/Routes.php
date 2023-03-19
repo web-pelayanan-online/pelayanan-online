@@ -40,7 +40,7 @@ $routes->get('/admin_verifikasi', 'Admin::verifikasi', ['filter' => 'auth']);
 $routes->get('/admin_terima', 'Admin::terima', ['filter' => 'auth']);
 $routes->get('/admin_tolak', 'Admin::tolak', ['filter' => 'auth']);
 $routes->get('/surat/(:any)', 'Admin::detail/$1', ['filter' => 'auth']);
-$routes->get('/surat/(:segment)/(:num)', 'Admin::status/$1/$2', ['filter' => 'auth']);
+$routes->get('/status/(:segment)/(:num)', 'Admin::status/$1/$2', ['filter' => 'auth']);
 
 // USER
 $routes->post('/pengajuan/(:segment)', 'SuratController::pengajuan/$1');

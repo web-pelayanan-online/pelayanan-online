@@ -120,12 +120,4 @@ class Admin extends BaseController
 
         return view('admin/' . $file, $data);
     }
-
-    public function adminusaha()
-    {
-        $suratModel = new Surat;
-
-        $data['surat'] = $suratModel->findAll();
-        return view('admin_ketUsaha', $data);
-    }
 }
