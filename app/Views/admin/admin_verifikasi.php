@@ -95,6 +95,9 @@
                             <th style="width: 1%">
                                 No.
                             </th>
+                            <th style="width: 10%">
+                                Surat
+                            </th>
                             <th style="width: 20%">
                                 Nama Pemohon
                             </th>
@@ -118,18 +121,21 @@
                                     <?= $nomor ?>
                                 </td>
                                 <td>
+                                    <?= $row['surat_id'] ?>
+                                </td>
+                                <td>
                                     <?= $row['nama_pemohon'] ?>
                                 </td>
                                 <td>
                                     <a href="surat/<?= $row['surat_id'] ?>" style="text-decoration: none;"><?= $row['nama_surat'] ?></a>
                                 </td>
                                 <td class="project-actions text-right">
-                                    <a class="btn btn-primary btn-sm" href="#">
+                                    <a class="btn btn-primary btn-sm" href="surat/terima/<?= $row['surat_id'] ?>">
                                         <i class="fa fa-folder">
                                         </i>
                                         Terima
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="#">
+                                    <a class="btn btn-danger btn-sm" href="surat/tolak/<?= $row['surat_id'] ?>">
                                         <i class="fa fa-trash">
                                         </i>
                                         Batal

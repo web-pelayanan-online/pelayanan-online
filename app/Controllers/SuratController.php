@@ -10,21 +10,6 @@ class SuratController extends BaseController
 {
     use ResponseTrait;
 
-    public function index()
-    {
-    }
-
-    public function show($id = null)
-    {
-        $suratModel = new Surat;
-        $data = $suratModel->where('surat_id', $id)->first();
-        if ($data) {
-            return $this->respond($data);
-        } else {
-            return $this->failNotFound('Data voucher tidak ditemukan');
-        }
-    }
-
     public function pengajuan($url = null)
     {
         $rules = [
@@ -96,11 +81,25 @@ class SuratController extends BaseController
 
             $suratModel->save($suratData);
 
+            $findId = $suratModel
+                ->where('nama_surat', $suratData['nama_surat'])
+                ->where('nama_pemohon', $suratData['nama_pemohon'])
+                ->orderBy('surat_id', 'DESC')
+                ->first();
+
+            $judul = "Saya%20mau%20membuat%20" . $suratData['nama_surat'] . ",%20dengan%20ketentuan%20:";
+            $suratID = "%0ASurat%20ID%20:%20" . $findId['surat_id'];
+            $nama = "%0ANama%20:%20" . $suratData['nama_pemohon'];
+            $alamat = "%0AAlamat%20:%20" . $suratData['alamat_pemohon'];
+            $nik = "%0ANIK%20:%20" . $suratData['nik_pemohon'];
+
+            $pesan = $judul . $suratID . $nama . $alamat . $nik;
+
             $response = [
                 'status' => true,
                 'message' => 'Pengajuan berhasil ditambahkan',
             ];
-            return redirect()->to("https://api.whatsapp.com/send?phone=+6285729982887&text=test");
+            return redirect()->to("https://api.whatsapp.com/send?phone=+6285729982887&text=" . $pesan);
         } else {
             $response = [
                 'status' => false,

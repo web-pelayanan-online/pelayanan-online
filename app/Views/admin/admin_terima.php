@@ -93,22 +93,34 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Pelapor</th>
-                            <th>Alamat</th>
-                            <th>NIK</th>
-                            <th>Keterangan</th>
-                            <th>Keperluan</th>
+                            <th>Surat</th>
+                            <th>Nama Pemohon</th>
+                            <th>Nama Surat</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>kosong</td>
-                            <td>kosong</td>
-                            <td>kosong</td>
-                            <td>kosong</td>
-                            <td>kosong</td>
-                        </tr>
+                        <?php
+                        $nomor = 0;
+                        foreach ($surat as $row) :
+                            $nomor++;
+                        ?>
+                            <tr>
+                                <td>
+                                    <?= $nomor ?>
+                                </td>
+                                <td>
+                                    <?= $row['surat_id'] ?>
+                                </td>
+                                <td>
+                                    <?= $row['nama_pemohon'] ?>
+                                </td>
+                                <td>
+                                    <a href="surat/<?= $row['surat_id'] ?>" style="text-decoration: none;"><?= $row['nama_surat'] ?></a>
+                                </td>
+                            </tr>
+                        <?php
+                        endforeach;
+                        ?>
                     </tbody>
                 </table>
             </div>

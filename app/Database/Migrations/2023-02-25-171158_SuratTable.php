@@ -15,6 +15,11 @@ class SuratTable extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true
             ],
+            'status_surat'          => [
+                'type'           => 'INT',
+                'constraint'     => 1,
+                'default'        => 0,
+            ],
             'nama_surat'          => [
                 'type'           => 'VARCHAR',
                 'constraint'     => 255,
