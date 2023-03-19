@@ -90,4 +90,14 @@ class Admin extends BaseController
         $data['surat'] = $suratModel->findAll();
         return view('admin_ketUsaha', $data);
     }
+
+    public function terima()
+    {
+        return view('admin/admin_terima');
+    }
+
+    public function tolak()
+    {
+        return view('admin/admin_tolak');
+    }
 }

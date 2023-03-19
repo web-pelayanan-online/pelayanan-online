@@ -43,6 +43,22 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>admin_terima" class="nav-link">
+                            <i class="nav-icon fa fa-folder"></i>
+                            <p>
+                                Surat Yang Diterima
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>admin_tolak" class="nav-link">
+                            <i class="nav-icon fa fa-trash"></i>
+                            <p>
+                                Surat Yang Ditolak
+                            </p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

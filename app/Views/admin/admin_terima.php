@@ -1,6 +1,7 @@
 <?= $this->extend('layout/admin_layout') ?>
 
 <?= $this->section('content') ?>
+
 <div class="wrapper">
 
     <!-- Preloader -->
@@ -8,7 +9,6 @@
             <img class="animation__shake" src="img/Bantul.png" height="80" width="60">
             <p>Kelurahan Gilangharjo</p>
         </div> -->
-
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
@@ -26,7 +26,7 @@
                     <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a href="<?php echo base_url('admin_dashboard'); ?>" class="nav-link">
+                        <a href="<?php echo base_url(); ?>admin_dashboard" class="nav-link">
                             <i class="nav-icon fa fa-tachometer"></i>
                             <p>
                                 Beranda
@@ -35,7 +35,7 @@
                     </li>
                     <!-- data tabel -->
                     <li class="nav-item">
-                        <a href="<?php echo base_url(); ?>admin_verifikasi" class="nav-link active">
+                        <a href="<?php echo base_url(); ?>admin_verifikasi" class="nav-link">
                             <i class="nav-icon fa fa-table"></i>
                             <p>
                                 Verifikasi Surat
@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo base_url(); ?>admin_terima" class="nav-link">
+                        <a href="<?php echo base_url(); ?>admin_terima" class="nav-link active">
                             <i class="nav-icon fa fa-folder"></i>
                             <p>
                                 Surat Yang Diterima
@@ -72,13 +72,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Surat Keterangan Beda Identitas</h1>
+                        <h1 class="m-0">Surat Yang Diterima</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_dashboard" style="text-decoration: none;">Beranda</a></li>
-                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin_verifikasi" style="text-decoration: none;">Verifikasi Surat</a></li>
-                            <li class="breadcrumb-item active">Surat Keterangan Beda Identitas</li>
+                            <li class="breadcrumb-item active">Surat Yang Diterima</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -94,23 +93,21 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Nama Pelapor</th>
                             <th>Alamat</th>
                             <th>NIK</th>
-                            <th>Identitas dalam (Nama Kartu)</th>
-                            <th>Nomor Identitas</th>
-                            <th>Perbedaan</th>
+                            <th>Keterangan</th>
+                            <th>Keperluan</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><?= $nama_pemohon ?></td>
-                            <td><?= $alamat_pemohon ?></td>
-                            <td><?= $nik_pemohon ?></td>
-                            <td><?= $identitas_kartu ?></td>
-                            <td><?= $nomor_identitas ?></td>
-                            <td><?= $perbedaan ?></td>
+                            <td>kosong</td>
+                            <td>kosong</td>
+                            <td>kosong</td>
+                            <td>kosong</td>
+                            <td>kosong</td>
                         </tr>
                     </tbody>
                 </table>
@@ -120,20 +117,5 @@
         <!-- /.card -->
         <!-- /.content -->
     </div>
-
-    <!-- Surat Keterangan -->
-
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <strong style="color:orange;">Copyright &copy; 2023 KKN UAD 101 X Kelurahan Gilangharjo</strong>
-        All rights reserved.
-    </footer>
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
 </div>
-<!-- ./wrapper -->
 <?= $this->endSection() ?>

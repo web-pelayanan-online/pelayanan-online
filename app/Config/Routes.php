@@ -50,6 +50,8 @@ $routes->get('/admin_skck', 'Admin::adminskck', ['filter' => 'auth']);
 $routes->get('/admin_kehilangan', 'Admin::adminkehilangan', ['filter' => 'auth']);
 $routes->get('/admin_domisili', 'Admin::admindomisili', ['filter' => 'auth']);
 $routes->get('/admin_keterangan', 'Admin::adminketerangan', ['filter' => 'auth']);
+$routes->get('/admin_terima', 'Admin::terima', ['filter' => 'auth']);
+$routes->get('/admin_tolak', 'Admin::tolak', ['filter' => 'auth']);
 
 
 $routes->post('/pengajuan/(:segment)', 'SuratController::pengajuan/$1');
