@@ -2,17 +2,6 @@
 
 <?= $this->section('content') ?>
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/gilangharjo2.jpg" style="width:100%; height: 600px;" alt="...">
-            <div class="centered" style="color:white; font-size:large; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">TRANSFORMASI DIGITAL KALURAHAN
-                <p>Perluas Jangkauan, Lakukan Percepatan Pelayanan untuk Masyarakat</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container p-3">
     <center>
         <div class="card">

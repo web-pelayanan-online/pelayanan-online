@@ -91,121 +91,86 @@
         <div class="card p-3">
             <div class="container">
                 <div class="form">
-                    <center>
-                        <form action="<?= base_url('/pengajuan/surat_kelahiran'); ?>" method="post" class="data" style="padding:15px;">
-                            <div class="row">
-                                <div class="col">
-                                    <table>
-                                        <input type="hidden" name="nama_surat" value="Surat Keterangan Kelahiran">
-                                        <tr>
-                                            <td>Nama Pelapor</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="nama_pemohon" value="<?= $nama_pemohon ?>" disabled></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="col">
-                                    <table>
-                                        <tr>
-                                            <td>Alamat</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_pemohon" value="<?= $alamat_pemohon ?>" disabled></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="col">
-                                    <table>
-                                        <tr>
-                                            <td>NIK</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="nik_pemohon" value="<?= $nik_pemohon ?>" disabled></td>
-                                        </tr>
-                                    </table>
+                    <form action="<?= base_url('/pengajuan/surat_kelahiran'); ?>" method="get" class="data" style="padding:15px;">
+                        <div class="row">
+                            <div class="batas p-3"></div>
+                            <div class="col">
+                                <input type="hidden" name="nama_surat" value="Surat Keterangan Kelahiran">
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Pelapor</label>
+                                    <input type="text" class="form-control" name="nama_pemohon" value="<?= $nama_pemohon ?>" disabled>
                                 </div>
                             </div>
-                            <p>Data Kelahiran: </p>
-                            <div class="row">
-                                <div class="col">
-                                    <table>
-                                        <tr>
-                                            <td>Hari/Tanggal/Jam</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" id="" name="tanggal" style="width:300px; border-radius:4px;" value="<?= $tanggal ?>" disabled></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nama Bayi</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="nama_data" value="<?= $nama_data ?>" disabled></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hubungan Pelapor Dengan Bayi</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="hubungan" value="<?= $hubungan ?>" disabled></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="col">
-                                    <table>
-                                        <tr>
-                                            <td>Tempat Kelahiran</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="tempat" value="<?= $tempat ?>" disabled></td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>Jenis Kelamin Bayi</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="jenis_kelamin" value="<?= $jenis_kelamin ?>" disabled></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Anak Ke -</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="anak_ke" value="<?= $anak_ke ?>" disabled></td>
-                                        </tr>
-                                    </table>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Alamat</label>
+                                    <input type="text" class="form-control" name="alamat_pemohon" value="<?= $alamat_pemohon ?>" disabled>
                                 </div>
                             </div>
-                            <p>Data Orang Tua: </p>
-                            <div class="row">
-                                <div class="col">
-                                    <table>
-                                        <tr>
-                                            <td>Nama Ayah</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ayah" value="<?= $nama_ayah ?>" disabled></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="col">
-                                    <table>
-                                        <tr>
-                                            <td>Nama Ibu</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ibu" value="<?= $nama_ibu ?>" disabled></td>
-                                        </tr>
-                                    </table>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">NIK</label>
+                                    <input type="number" class="form-control" name="nik_pemohon" value="<?= $nik_pemohon ?>" disabled>
                                 </div>
                             </div>
-                        </form>
-                    </center>
+                        </div>
+                        <p><b>Data Kelahiran:</b></p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Tanggal</label>
+                                    <input type="date" class="form-control" name="tanggal" value="<?= $tanggal ?>" disabled>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Bayi</label>
+                                    <input type="text" class="form-control" name="nama_data" value="<?= $nama_data ?>" disabled>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Hubungan Pelapor Dengan Bayi</label>
+                                    <input type="text" class="form-control" name="hubungan" value="<?= $hubungan ?>" disabled>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Alamat Kelahiran</label>
+                                    <input type="text" class="form-control" name="tempat" value="<?= $tempat ?>" disabled>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Jenis Kelamin Bayi</label>
+                                    <select class="form-select" name="jenis_kelamin" value="<?= $jenis_kelamin ?>" disabled>
+                                        <option value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Anak Ke -</label>
+                                    <input type="text" class="form-control" name="anak_ke" value="<?= $anak_ke ?>" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <p><b>Data Orang Tua:</b></p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Ayah</label>
+                                    <input type="text" class="form-control" name="nama_ayah" value="<?= $nama_ayah ?>" disabled>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Ibu</label>
+                                    <input type="text" class="form-control" name="nama_ibu" value="<?= $nama_ibu ?>" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
+                <!-- /.card-body -->
             </div>
-            <!-- /.card-body -->
+            <!-- /.card -->
+            <!-- /.content -->
         </div>
-        <!-- /.card -->
-        <!-- /.content -->
     </div>
-</div>
-<!-- ./wrapper -->
-<?= $this->endSection() ?>
+    <!-- ./wrapper -->
+    <?= $this->endSection() ?>
