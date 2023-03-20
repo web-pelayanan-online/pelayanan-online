@@ -21,6 +21,7 @@ class AuthController extends BaseController
         $rules = [
             "username" => "required",
             "password" => "required",
+            "password_confirm" => "required",
         ];
 
         $messages = [
@@ -28,6 +29,9 @@ class AuthController extends BaseController
                 "required" => "{field} tidak boleh kosong"
             ],
             "password" => [
+                "required" => "{field} tidak boleh kosong"
+            ],
+            "password_confirm" => [
                 "required" => "{field} tidak boleh kosong"
             ],
         ];
@@ -40,20 +44,28 @@ class AuthController extends BaseController
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT)
             ];
 
-            $userModel->save($userData);
+            $findUsername = $userModel->where('username', $userData['username'])->findAll();
 
-            $response = [
-                'status' => true,
-                'message' => 'Akun berhasil dibuat',
-            ];
-            return $this->respond($response, 200);
+            if (!$findUsername) {
+                $userModel->save($userData);
+            } else {
+                // return $this->failNotFound('Username telah digunakan');
+                return redirect()->to(base_url() . "register");
+            }
+
+            // $response = [
+            //     'status' => true,
+            //     'message' => 'Akun berhasil dibuat',
+            // ];
+
+            return redirect()->to(base_url() . "auth");
         } else {
-            $response = [
-                'status' => false,
-                'errors' => $this->validator->getErrors(),
-            ];
+            // $response = [
+            //     'status' => false,
+            //     'errors' => $this->validator->getErrors(),
+            // ];
 
-            return $this->fail($response);
+            return redirect()->to(base_url() . "register");
         }
     }
 
