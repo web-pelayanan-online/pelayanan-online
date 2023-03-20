@@ -21,7 +21,7 @@ class AuthController extends BaseController
         $rules = [
             "username" => "required",
             "password" => "required",
-            "password_confirm" => "required",
+            // "password_confirm" => "required",
         ];
 
         $messages = [
@@ -31,9 +31,9 @@ class AuthController extends BaseController
             "password" => [
                 "required" => "{field} tidak boleh kosong"
             ],
-            "password_confirm" => [
-                "required" => "{field} tidak boleh kosong"
-            ],
+            // "password_confirm" => [
+            //     "required" => "{field} tidak boleh kosong"
+            // ],
         ];
 
         if ($this->validate($rules, $messages)) {

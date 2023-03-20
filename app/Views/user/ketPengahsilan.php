@@ -32,7 +32,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jumlah Tanggungan Anak</label>
-                        <input type="text" class="form-control" name="jml_tanggungan_anak" placeholder="">
+                        <input type="number" class="form-control" name="jml_tanggungan_anak" placeholder="">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Keperluan</label>

@@ -21,7 +21,8 @@ class Admin extends BaseController
 
     public function dashboard()
     {
-        return view('admin/admin_dashboard');
+        $data['title'] = 'Dashboard Admin | Kelurahan Gilangharjo';
+        return view('admin/admin_dashboard', $data);
     }
 
     public function register()
@@ -33,7 +34,10 @@ class Admin extends BaseController
     {
         $suratModel = new Surat;
 
-        $data['surat'] = $suratModel->where('status_surat', 0)->findAll();
+        $data = [
+            'surat' => $suratModel->where('status_surat', 0)->findAll(),
+            'title' => 'Verifikasi Surat | Kelurahan Gilangharjo',
+        ];
         return view('admin/admin_verifikasi', $data);
     }
 
@@ -41,7 +45,10 @@ class Admin extends BaseController
     {
         $suratModel = new Surat;
 
-        $data['surat'] = $suratModel->where('status_surat', 1)->findAll();
+        $data = [
+            'surat' => $suratModel->where('status_surat', 1)->findAll(),
+            'title' => 'Surat Diterima | Kelurahan Gilangharjo',
+        ];
         return view('admin/admin_terima', $data);
     }
 
@@ -49,7 +56,10 @@ class Admin extends BaseController
     {
         $suratModel = new Surat;
 
-        $data['surat'] = $suratModel->where('status_surat', 2)->findAll();
+        $data = [
+            'surat' => $suratModel->where('status_surat', 2)->findAll(),
+            'title' => 'Surat Ditolak | Kelurahan Gilangharjo',
+        ];
         return view('admin/admin_tolak', $data);
     }
 
@@ -122,6 +132,8 @@ class Admin extends BaseController
                 $file = 'admin_dashboard';
                 break;
         }
+
+        $data['title'] = 'Detail Surat | Kelurahan Gilangharjo';
 
         return view('admin/' . $file, $data);
     }
