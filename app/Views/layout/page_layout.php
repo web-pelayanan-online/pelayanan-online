@@ -20,6 +20,18 @@
 <body>
     <?= $this->include('layout/navbar') ?>
 
+    <div id="carouselExampleSlidesOnly" class="carousel slide mt-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/tampaksamping.jpg" style="width:100%; height: auto; filter: brightness(80%);" alt="...">
+                <div class="carousel-caption d-md-block">
+                    <h2>TRANSFORMASI DIGITAL KALURAHAN</h2>
+                    <h4>Perluas Jangkauan, Lakukan Percepatan Pelayanan untuk Masyarakat</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?= $this->renderSection('content') ?>
 
     <?= $this->include('layout/footer') ?>

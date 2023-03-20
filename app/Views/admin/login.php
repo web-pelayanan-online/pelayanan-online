@@ -34,10 +34,10 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form action="<?= base_url('/register'); ?>" method="post" id="login" class="login100-form validate-form">
+                <form action="<?= base_url('/login'); ?>" method="post" id="login" class="login100-form validate-form">
                     <div class="logo text-center">
-                        <img src="img/Bantul.png" alt="" style="width: 15%; padding:5px;">
-                        <img src="img/UAD-warna.png" alt="" style="width: 20%; padding:5px;">
+                        <a href="<?= base_url('') ?>"><img src="img/Bantul.png" alt="" style="width: 15%; padding:5px;"></a>
+                        <a href="<?= base_url('') ?>"><img src="img/UAD-warna.png" alt="" style="width: 20%; padding:5px;"></a>
                         <span class="login100-form-title p-b-43" style="color:#b78a02">
                             Sign in
                         </span>

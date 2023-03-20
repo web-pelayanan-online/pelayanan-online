@@ -2,72 +2,52 @@
 
 <?= $this->section('content') ?>
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/gilangharjo2.jpg" style="width:100%; height: 600px;" alt="...">
-            <div class="centered" style="color:white; font-size:large; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">TRANSFORMASI DIGITAL KALURAHAN
-                <p>Perluas Jangkauan, Lakukan Percepatan Pelayanan untuk Masyarakat</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container">
     <div class="form">
-        <center>
-            <form action="<?= base_url('/pengajuan/surat_domisili'); ?>" method="post" class="data" style="padding:15px;">
-                <div class="row">
-                    <center>
-                        <div class="header p-3" style="width:60%; color:black; background-color:#b78a02; border-radius: 10px;">
-                            <h2>Surat Keterangan Pernyataan Domisili</h2>
-                        </div>
-                    </center>
-                    <div class="col">
-                        <table>
-                            <input type="hidden" name="nama_surat" value="Surat Keterangan Pernyataan Domisili">
-                            <tr>
-                                <td>Nama</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:350px; border-radius:4px;" name="nama_pemohon"></td>
-                            </tr>
-                            <tr>
-                                <td>Alamat Sesuai KTP</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:350px; border-radius:4px;" name="alamat_data"></td>
-                            </tr>
-                        </table>
+        <form action="<?= base_url('/pengajuan/surat_domisili'); ?>" method="post" class="data" style="padding:15px;">
+            <div class="row">
+                <div class="header p-3 text-md text-center" style="color:black; background-color:#b78a02; border-radius: 10px;">
+                    <h2>Surat Keterangan Pernyataan Domisili</h2>
+                </div>
+                <div class="batas p-3"></div>
+                <div class="col">
+                    <input type="hidden" name="nama_surat" value="Surat Keterangan Pernyataan Domisili">
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" name="nama_pemohon" placeholder="">
                     </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>NIK</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:350px; border-radius:4px;" name="nik_pemohon"></td>
-                            </tr>
-                            <tr>
-                                <td>Alamat Domisili</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:350px; border-radius:4px;" name="alamat_pemohon"></td>
-                            </tr>
-                        </table>
+                    <div class="mb-3">
+                        <label class="form-label">Alamat Sesuai KTP</label>
+                        <input type="text" class="form-control" name="alamat_data" placeholder="">
                     </div>
                 </div>
-                <table>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">NIK</label>
+                        <input type="number" class="form-control" name="nik_pemohon" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Alamat Domisili</label>
+                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Keterangan</label>
+                <textarea class="form-control" name="keterangan" rows="3"></textarea>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto">
+                <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>
+            </div>
+            <!-- <table>
                     <tr>
                         <td>Keterangan</td>
                     </tr>
                     <tr>
                         <td><textarea name="keterangan" id="" cols="133" rows="5" style="border-radius:4px;"></textarea></td>
                     </tr>
-                </table>
-                <button type="submit" style="width: 15%; height:40px; border-radius:4px; background-color:#b78a02; border:none; color:white;">Submit</button>
-            </form>
-        </center>
+                </table> -->
+        </form>
     </div>
 </div>
 

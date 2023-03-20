@@ -9,7 +9,7 @@
             <div class="row">
                 <!--Grid column-->
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-
+                    <h5 class="text-uppercase">Kontak</h5>
                     <ul class="list-unstyled mb-0">
                         <li>
                             <a href="#!" style="color:white; text-decoration: none;"><i class="fa fa-phone fa-lg" aria-hidden="true"></i> +62857 2998 2887</a>
@@ -42,10 +42,10 @@
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="https://www.facebook.com/kalurahan.gilangharjo/" style="color:white; text-decoration: none;"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-                            <a href="https://twitter.com/combineri" style="color:white; text-decoration: none;"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-                            <a href="https://www.youtube.com/@kalurahan.gilangharjo" style="color:white; text-decoration: none;"><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></a>
-                            <a href="https://www.instagram.com/kalurahan_gilangharjo/?hl=id" style="color:white; text-decoration: none;"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/kalurahan.gilangharjo/" style="color:white; text-decoration: none;"><i class="fa fa-facebook-official fa-2x p-2" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/combineri" style="color:white; text-decoration: none;"><i class="fa fa-twitter fa-2x p-2" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/@kalurahan.gilangharjo" style="color:white; text-decoration: none;"><i class="fa fa-youtube-play fa-2x p-2" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/kalurahan_gilangharjo/?hl=id" style="color:white; text-decoration: none;"><i class="fa fa-instagram fa-2x p-2" aria-hidden="true"></i></a>
 
                         </li>
 

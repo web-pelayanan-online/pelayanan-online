@@ -2,169 +2,107 @@
 
 <?= $this->section('content') ?>
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/gilangharjo2.jpg" style="width:100%; height: 600px;" alt="...">
-            <div class="centered" style="color:white; font-size:large; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">TRANSFORMASI DIGITAL KALURAHAN
-                <p>Perluas Jangkauan, Lakukan Percepatan Pelayanan untuk Masyarakat</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container">
     <div class="form">
-        <center>
-            <form action="<?= base_url('/pengajuan/surat_kematian'); ?>" method="post" class="data" style="padding:15px;">
-                <div class="row">
-                    <center>
-                        <div class="header p-3" style="width:60%; color:black; background-color:#b78a02; border-radius: 10px;">
-                            <h2>Surat Keterangan Kematian</h2>
-                        </div>
-                    </center>
-                    <div class="col">
-                        <table>
-                            <input type="hidden" name="nama_surat" value="Surat Keterangan Kematian">
-                            <tr>
-                                <td>Nama</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_pemohon"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Alamat</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_pemohon"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>NIK</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="nik_pemohon"></td>
-                            </tr>
-                        </table>
+        <form action="<?= base_url('/pengajuan/surat_kematian'); ?>" method="post" class="data" style="padding:15px;">
+            <div class="row">
+                <div class="header p-3 text-md text-center" style="color:black; background-color:#b78a02; border-radius: 10px;">
+                    <h2>Surat Keterangan Kematian</h2>
+                </div>
+                <div class="batas p-3"></div>
+                <div class="col">
+                    <input type="hidden" name="nama_surat" value="Surat Keterangan Kematian">
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" name="nama_pemohon" placeholder="">
                     </div>
                 </div>
-                <p>Data Yang Meninggal: </p>
-                <div class="row">
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Nama dan Alias</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_data"></td>
-                            </tr>
-                            <tr>
-                                <td>Jenis Kelamin</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select name="jenis_kelamin" id="" style="width:300px; border-radius:4px;">
-                                        <option value="Laki-Laki">Laki-Laki</option>
-                                        <option value="Perempuan">Perempuan</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Nama Ayah</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ayah"></td>
-                            </tr>
-                            <tr>
-                                <td>Alamat</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="alamat_data"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Umur</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="umur"></td>
-                            </tr>
-                            <tr>
-                            <tr>
-                                <td>Agama</td>
-                            </tr>
-                            <td>
-                                <select name="agama" id="" style="width:300px; border-radius:4px;">
-                                    <option value="Islam">Islam</option>
-                                    <option value="Katholik">Katholik</option>
-                                    <option value="Protestan">Protestan</option>
-                                    <option value="Budha">Budha</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Konghucu">Konghucu</option>
-                                </select>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td>Nama Ibu</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="nama_ibu"></td>
-                            </tr>
-                            <tr>
-                                <td>Hari/Tanggal/Jam</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="datetime-local" id="" name="tanggal" style="width:300px; border-radius:4px;">
-                                </td>
-                            </tr>
-                        </table>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Alamat</label>
+                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Tempat Meninggal</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="tempat"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Penyebab Kematian</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="penyebab"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Hubungan Pelapor Dengan Yang Meninggal</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:300px; border-radius:4px;" name="hubungan"></td>
-                            </tr>
-                        </table>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">NIK</label>
+                        <input type="number" class="form-control" name="nik_pemohon" placeholder="">
                     </div>
                 </div>
-                <button type="submit" style="width: 15%; height:40px; border-radius:4px; background-color:#b78a02; border:none; color:white;">Submit</button>
-            </form>
-        </center>
+            </div>
+            <p><b>Data Yang Meninggal:</b></p>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Nama dan Alias</label>
+                        <input type="text" class="form-control" name="nama_data" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Jenis Kelamin</label>
+                        <select class="form-select" name="jenis_kelamin">
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nama Ayah</label>
+                        <input type="text" class="form-control" name="nama_ayah" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Alamat</label>
+                        <input type="text" class="form-control" name="alamat_data" placeholder="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Umur</label>
+                        <input type="text" class="form-control" name="umur" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Agama</label>
+                        <select class="form-select" name="agama">
+                            <option value="Islam">Islam</option>
+                            <option value="Katholik">Katholik</option>
+                            <option value="Protestan">Protestan</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Konghucu">Konghucu</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nama Ibu</label>
+                        <input type="text" class="form-control" name="nama_ibu" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal</label>
+                        <input type="date" class="form-control" name="tanggal" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Tempat Meninggal</label>
+                        <input type="text" class="form-control" name="tempat" placeholder="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Penyebab Kematian</label>
+                        <input type="text" class="form-control" name="penyebab" placeholder="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Hubungan Pelapor Dengan Yang Meninggal</label>
+                        <input type="text" class="form-control" name="hubungan" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto">
+                <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>
+            </div>
+        </form>
     </div>
 </div>
 

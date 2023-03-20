@@ -2,76 +2,48 @@
 
 <?= $this->section('content') ?>
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/gilangharjo2.jpg" style="width:100%; height: 600px;" alt="...">
-            <div class="centered" style="color:white; font-size:large; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">TRANSFORMASI DIGITAL KALURAHAN
-                <p>Perluas Jangkauan, Lakukan Percepatan Pelayanan untuk Masyarakat</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container">
     <div class="form">
-        <center>
-            <form action="<?= base_url('/pengajuan/surat_bedaidentitas'); ?>" method="post" class="data" style="padding:15px;">
-                <div class="row">
-                    <center>
-                        <div class="header p-3" style="width:60%; color:black; background-color:#b78a02; border-radius: 10px;">
-                            <h2>Surat Keterangan Beda Identitas</h2>
-                        </div>
-                    </center>
-                    <div class="col">
-                        <table>
-                            <input type="hidden" name="nama_surat" value="Surat Keterangan Beda Identitas">
-                            <tr>
-                                <td>Nama</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;" name="nama_pemohon"></td>
-                            </tr>
-                            <tr>
-                                <td>NIK</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;" name="nik_pemohon"></td>
-                            </tr>
-                            <tr>
-                                <td>Nomor Identitas</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;" name="nomor_identitas"></td>
-                            </tr>
-                        </table>
+        <form action="<?= base_url('/pengajuan/surat_bedaidentitas'); ?>" method="post" class="data" style="padding:15px;">
+            <div class="row">
+                <div class="header p-3 text-md text-center" style="color:black; background-color:#b78a02; border-radius: 10px;">
+                    <h2>Surat Keterangan Beda Identitas</h2>
+                </div>
+                <div class="batas p-3"></div>
+                <div class="col">
+                    <input type="hidden" name="nama_surat" value="Surat Keterangan Beda Identitas">
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" name="nama_pemohon" placeholder="">
                     </div>
-                    <div class="col">
-                        <table>
-                            <tr>
-                                <td>Alamat</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;" name="alamat_pemohon"></td>
-                            </tr>
-                            <tr>
-                                <td>Identitas dalam (Nama Kartu)</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;" name="identitas_kartu"></td>
-                            </tr>
-                            <tr>
-                                <td>Perbedaan</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" style="width:500px; border-radius:4px;" name="perbedaan"></td>
-                            </tr>
-                        </table>
+                    <div class="mb-3">
+                        <label class="form-label">NIK</label>
+                        <input type="number" class="form-control" name="nik_pemohon" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Identitas</label>
+                        <input type="number" class="form-control" name="nomor_pemohon" placeholder="">
                     </div>
                 </div>
-                <button type="submit" style="width: 15%; height:40px; border-radius:4px; background-color:#b78a02; border:none; color:white;">Submit</button>
-            </form>
-        </center>
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label">Alamat</label>
+                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Identitas dalam (Nama Kartu)</label>
+                        <input type="text" class="form-control" name="identitas_kartu" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Perbedaan</label>
+                        <input type="text" class="form-control" name="perbedaan" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto">
+                <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>
+            </div>
+        </form>
     </div>
 </div>
 <?= $this->endSection() ?>
