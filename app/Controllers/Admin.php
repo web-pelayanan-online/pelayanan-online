@@ -24,6 +24,11 @@ class Admin extends BaseController
         return view('admin/admin_dashboard');
     }
 
+    public function register()
+    {
+        return view('admin/register');
+    }
+
     public function verifikasi()
     {
         $suratModel = new Surat;
