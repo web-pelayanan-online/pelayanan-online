@@ -20,8 +20,8 @@ class AuthController extends BaseController
     {
         $rules = [
             "username" => "required",
-            "password" => "required",
-            // "password_confirm" => "required",
+            "password" => "required|min_length[8]",
+            "password_confirm" => "required_with[password]|matches[password]",
         ];
 
         $messages = [
@@ -29,11 +29,13 @@ class AuthController extends BaseController
                 "required" => "{field} tidak boleh kosong"
             ],
             "password" => [
-                "required" => "{field} tidak boleh kosong"
+                "required" => "{field} tidak boleh kosong",
+                "min_length" => "{field} berisi minimal 8 karakter"
             ],
-            // "password_confirm" => [
-            //     "required" => "{field} tidak boleh kosong"
-            // ],
+            "password_confirm" => [
+                "required_with" => "{field} tidak boleh kosong",
+                'matches' => 'Konfirmasi kata sandi tidak cocok dengan kata sandi'
+            ],
         ];
 
         if ($this->validate($rules, $messages)) {
@@ -49,23 +51,15 @@ class AuthController extends BaseController
             if (!$findUsername) {
                 $userModel->save($userData);
             } else {
-                // return $this->failNotFound('Username telah digunakan');
-                return redirect()->to(base_url() . "register");
+                session()->setFlashdata('fail', 'Username telah digunakan');
+                return redirect()->to(base_url('register'))->withInput();
             }
 
-            // $response = [
-            //     'status' => true,
-            //     'message' => 'Akun berhasil dibuat',
-            // ];
-
+            session()->setFlashdata('success', 'Akun Berhasil Dibuat');
             return redirect()->to(base_url() . "auth");
         } else {
-            // $response = [
-            //     'status' => false,
-            //     'errors' => $this->validator->getErrors(),
-            // ];
 
-            return redirect()->to(base_url() . "register");
+            return redirect()->to(base_url('register'))->withInput();
         }
     }
 
@@ -88,9 +82,22 @@ class AuthController extends BaseController
         ];
         if (!$this->validate($rules, $messages)) return $this->fail($this->validator->getErrors());
 
+        // recaptcha V3 Validation
+        $recaptcha_url = "https://www.google.com/recaptcha/api/siteverify";
+        $recaptcha_secret = "6LdslF4lAAAAAAJ0An00RkZwMsxC8ilYjrazwj7-";
+        $recaptcha_response = $this->request->getVar('recaptcha');
+        $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+        $recaptcha = json_decode($recaptcha);
+
+        if (!($recaptcha->success == true && $recaptcha->score >= 0.5 && $recaptcha->action == 'login')) {
+            return redirect()->to(base_url() . "auth");
+        }
+
+        // check username 
         $userData = $userModel->where('username', $this->request->getVar('username'))->first();
         if (!$userData) return redirect()->to(base_url() . "auth");
 
+        // check password
         $verifyPass = password_verify($this->request->getVar('password'), $userData['password']);
         if (!$verifyPass) return redirect()->to(base_url() . "auth");
 
@@ -106,12 +113,8 @@ class AuthController extends BaseController
         ];
 
         $token = JWT::encode($payload, $key, 'HS256');
-
-        // $response = [
-        //     'data' => [$token]
-        // ];
-
         setcookie("access_token", $token, time() + 60 * 60, '/');
+
         return redirect()->to(base_url() . "admin_dashboard");
     }
 
