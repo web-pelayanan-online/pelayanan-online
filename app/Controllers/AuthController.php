@@ -84,7 +84,7 @@ class AuthController extends BaseController
 
         // recaptcha V3 Validation
         $recaptcha_url = "https://www.google.com/recaptcha/api/siteverify";
-        $recaptcha_secret = "6LdslF4lAAAAAAJ0An00RkZwMsxC8ilYjrazwj7-";
+        $recaptcha_secret = getenv('RECAPTCHA_SECRET');
         $recaptcha_response = $this->request->getVar('recaptcha');
         $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
         $recaptcha = json_decode($recaptcha);
