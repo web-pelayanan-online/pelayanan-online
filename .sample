@@ -38,8 +38,8 @@ database.default.DBDriver = MySQLi
 database.default.DBPrefix =
 database.default.port = 3306
 
-TOKEN_SECRET = jdflksalfjgueojflkajdlkfjagjldjglkajslfei
-RECAPTCHA_SECRET = 6LdslF4lAAAAAAJ0An00RkZwMsxC8ilYjrazwj7-
+TOKEN_SECRET = random_token
+RECAPTCHA_SECRET = secret_key
 
 # database.tests.hostname = localhost
 # database.tests.database = ci4_test
