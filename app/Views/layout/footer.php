@@ -15,7 +15,7 @@
                             <a href="#!" style="color:white; text-decoration: none;"><i class="fa fa-phone fa-lg" aria-hidden="true"></i> +62857 2998 2887</a>
                         </li>
                         <li>
-                            <a href="#!" style="color:white; text-decoration: none;"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> example@gmail.com</a>
+                            <a href="#!" style="color:white; text-decoration: none;"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> desa.gilangharjo@bantulkab.go.id</a>
                         </li>
 
                     </ul>

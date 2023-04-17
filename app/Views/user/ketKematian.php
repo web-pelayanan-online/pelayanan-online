@@ -14,19 +14,19 @@
                     <input type="hidden" name="nama_surat" value="Surat Keterangan Kematian">
                     <div class="mb-3">
                         <label class="form-label">Nama</label>
-                        <input type="text" class="form-control" name="nama_pemohon" placeholder="">
+                        <input type="text" class="form-control" name="nama_pemohon" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Alamat</label>
-                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="">
+                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">NIK</label>
-                        <input type="number" class="form-control" name="nik_pemohon" placeholder="">
+                        <input type="number" class="form-control" name="nik_pemohon" placeholder="" required>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Nama dan Alias</label>
-                        <input type="text" class="form-control" name="nama_data" placeholder="">
+                        <input type="text" class="form-control" name="nama_data" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jenis Kelamin</label>
@@ -46,17 +46,17 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama Ayah</label>
-                        <input type="text" class="form-control" name="nama_ayah" placeholder="">
+                        <input type="text" class="form-control" name="nama_ayah" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Alamat</label>
-                        <input type="text" class="form-control" name="alamat_data" placeholder="">
+                        <input type="text" class="form-control" name="alamat_data" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Umur</label>
-                        <input type="text" class="form-control" name="umur" placeholder="">
+                        <input type="text" class="form-control" name="umur" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Agama</label>
@@ -71,11 +71,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama Ibu</label>
-                        <input type="text" class="form-control" name="nama_ibu" placeholder="">
+                        <input type="text" class="form-control" name="nama_ibu" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" name="tanggal" placeholder="">
+                        <input type="date" class="form-control" name="tanggal" placeholder="" required>
                     </div>
                 </div>
             </div>
@@ -83,19 +83,19 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Tempat Meninggal</label>
-                        <input type="text" class="form-control" name="tempat" placeholder="">
+                        <input type="text" class="form-control" name="tempat" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Penyebab Kematian</label>
-                        <input type="text" class="form-control" name="penyebab" placeholder="">
+                        <input type="text" class="form-control" name="penyebab" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Hubungan Pelapor Dengan Yang Meninggal</label>
-                        <input type="text" class="form-control" name="hubungan" placeholder="">
+                        <input type="text" class="form-control" name="hubungan" placeholder="" required>
                     </div>
                 </div>
             </div>

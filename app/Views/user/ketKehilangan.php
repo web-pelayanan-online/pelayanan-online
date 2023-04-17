@@ -14,19 +14,19 @@
                     <input type="hidden" name="nama_surat" value="Surat Keterangan Pengantar Kehilangan">
                     <div class="mb-3">
                         <label class="form-label">Nama Pelapor</label>
-                        <input type="text" class="form-control" name="nama_pemohon" placeholder="">
+                        <input type="text" class="form-control" name="nama_pemohon" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Alamat</label>
-                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="">
+                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">NIK</label>
-                        <input type="number" class="form-control" name="nik_pemohon" placeholder="">
+                        <input type="number" class="form-control" name="nik_pemohon" placeholder="" required>
                     </div>
                 </div>
             </div>
@@ -35,27 +35,27 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Hari/Tanggal/Jam</label>
-                        <input type="datetime-local" class="form-control" name="tanggal" placeholder="">
+                        <input type="datetime-local" class="form-control" name="tanggal" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama Barang Hilang</label>
-                        <input type="text" class="form-control" name="nama_data" placeholder="">
+                        <input type="text" class="form-control" name="nama_data" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Tempat Kehilangan</label>
-                        <input type="text" class="form-control" name="tempat" placeholder="">
+                        <input type="text" class="form-control" name="tempat" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Ciri-Ciri Barang</label>
-                        <input type="text" class="form-control" name="ciri_ciri" placeholder="">
+                        <input type="text" class="form-control" name="ciri_ciri" placeholder="" required>
                     </div>
                 </div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Keterangan Kejadian</label>
-                <textarea class="form-control" name="keterangan" rows="3"></textarea>
+                <textarea class="form-control" name="keterangan" rows="3" required></textarea>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto">
                 <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>
