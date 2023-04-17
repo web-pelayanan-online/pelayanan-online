@@ -14,7 +14,7 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-CI_ENVIRONMENT = development
+CI_ENVIRONMENT = production
 
 #--------------------------------------------------------------------
 # APP
@@ -38,9 +38,6 @@ database.default.DBDriver = MySQLi
 database.default.DBPrefix =
 database.default.port = 3306
 
-TOKEN_SECRET = random_token
-RECAPTCHA_SECRET = secret_key
-
 # database.tests.hostname = localhost
 # database.tests.database = ci4_test
 # database.tests.username = root
@@ -48,6 +45,17 @@ RECAPTCHA_SECRET = secret_key
 # database.tests.DBDriver = MySQLi
 # database.tests.DBPrefix =
 # database.tests.port = 3306
+
+#--------------------------------------------------------------------
+# JWT TOKEN
+#--------------------------------------------------------------------
+TOKEN_SECRET = random_key
+
+#--------------------------------------------------------------------
+# RECAPTCHA TOKEN
+#--------------------------------------------------------------------
+RECAPTCHA_SITE = recaptcha_site_key
+RECAPTCHA_SECRET = recaptcha_secret_key
 
 #--------------------------------------------------------------------
 # CONTENT SECURITY POLICY

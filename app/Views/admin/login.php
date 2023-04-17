@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="container-login100-form-btn" onclick="onSubmit()">
-                        <button class="login100-form-btn g-recaptcha" data-sitekey="6LdslF4lAAAAALW8jd53JryFoWpgapmfCTNmq-pI" data-callback='onSubmit' data-action='login'>
+                        <button class="login100-form-btn g-recaptcha" data-sitekey=<?= getenv('RECAPTCHA_SITE') ?> data-callback='onSubmit' data-action='login'>
                             Sign in
                         </button>
                     </div>
