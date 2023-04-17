@@ -104,17 +104,15 @@
 
             <!-- Halaman Verifikasi -->
             <li><b>Halaman Verifikasi</b></li>
-            <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos similique aspernatur incidunt perspiciatis praesentium dolores consequatur fugiat ut suscipit excepturi, tempora libero inventore. Distinctio nobis in mollitia cum magni expedita.
+            <p style="text-align: justify;">Merupakan halaman yang digunakan untuk melihat pengajuan surat secara detail, serta dapat menverifikasi bahwa surat tersebut akan diterima atau ditolak.
             </p>
             <p>Cara Verifikasi :</p>
             <ol>
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Lorem ipsum dolor sit amet consectetur</li>
+              <li>Pilih menu verifikasi surat</li>
+              <li>Periksa terlebih dahulu kebutuhan dari surat yang diajukan.</li>
+              <li>Klik nama surat yang tertera dan akan tampil kebutuhan terkait surat tersebut.</li>
+              <li>Bila sudah sesuai silahkan kembali ke halaman verifikasi surat dan tekan "Terima" Maka surat otomatis surat tersebut dikelompokkan ke menu surat yang diterima.</li>
+              <li>Bila tidak silahkan klik "Batal" Maka otomatis surat tersebut akan dikelompokkan ke surat yang tidak diterima.</li>
             </ol>
 
           </ul>

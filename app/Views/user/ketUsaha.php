@@ -14,7 +14,7 @@
                     <input type="hidden" name="nama_surat" value="Surat Keterangan Usaha">
                     <div class="mb-3">
                         <label class="form-label">Nama</label>
-                        <input type="text" class="form-control" name="nama_pemohon" placeholder="">
+                        <input type="text" class="form-control" name="nama_pemohon" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">NIK</label>
@@ -24,17 +24,17 @@
                 <div class="col">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Alamat</label>
-                        <input type="text" class="form-control" name="alamat_pemohon">
+                        <input type="text" class="form-control" name="alamat_pemohon" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama/Jenis Usaha</label>
-                        <input type="text" class="form-control" name="nama_data">
+                        <input type="text" class="form-control" name="nama_data" required>
                     </div>
                 </div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Keterangan</label>
-                <textarea class="form-control" name="keterangan" rows="3"></textarea>
+                <textarea class="form-control" name="keterangan" rows="3" required></textarea>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto">
                 <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>

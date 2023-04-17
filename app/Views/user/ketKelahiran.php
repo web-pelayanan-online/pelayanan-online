@@ -14,19 +14,19 @@
                     <input type="hidden" name="nama_surat" value="Surat Keterangan Kelahiran">
                     <div class="mb-3">
                         <label class="form-label">Nama Pelapor</label>
-                        <input type="text" class="form-control" name="nama_pemohon" placeholder="">
+                        <input type="text" class="form-control" name="nama_pemohon" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Alamat</label>
-                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="">
+                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">NIK</label>
-                        <input type="number" class="form-control" name="nik_pemohon" placeholder="">
+                        <input type="number" class="form-control" name="nik_pemohon" placeholder="" required>
                     </div>
                 </div>
             </div>
@@ -35,32 +35,32 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" name="tanggal" placeholder="">
+                        <input type="date" class="form-control" name="tanggal" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama Bayi</label>
-                        <input type="text" class="form-control" name="nama_data" placeholder="">
+                        <input type="text" class="form-control" name="nama_data" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Hubungan Pelapor Dengan Bayi</label>
-                        <input type="text" class="form-control" name="hubungan" placeholder="">
+                        <input type="text" class="form-control" name="hubungan" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Alamat Kelahiran</label>
-                        <input type="text" class="form-control" name="tempat" placeholder="">
+                        <input type="text" class="form-control" name="tempat" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jenis Kelamin Bayi</label>
-                        <select class="form-select" name="jenis_kelamin">
+                        <select class="form-select" name="jenis_kelamin" required>
                             <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Anak Ke -</label>
-                        <input type="text" class="form-control" name="anak_ke" placeholder="">
+                        <input type="text" class="form-control" name="anak_ke" placeholder="" required>
                     </div>
                 </div>
             </div>
@@ -69,13 +69,13 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Nama Ayah</label>
-                        <input type="text" class="form-control" name="nama_ayah" placeholder="">
+                        <input type="text" class="form-control" name="nama_ayah" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Nama Ibu</label>
-                        <input type="text" class="form-control" name="nama_ibu" placeholder="">
+                        <input type="text" class="form-control" name="nama_ibu" placeholder="" required>
                     </div>
                 </div>
             </div>
