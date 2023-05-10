@@ -79,21 +79,67 @@ class SuratController extends BaseController
                 'penyebab' => $this->request->getVar('penyebab'),
             ];
 
-            $suratModel->save($suratData);
+            // $suratModel->save($suratData);
 
-            $findId = $suratModel
-                ->where('nama_surat', $suratData['nama_surat'])
-                ->where('nama_pemohon', $suratData['nama_pemohon'])
-                ->orderBy('surat_id', 'DESC')
-                ->first();
+            // $findId = $suratModel
+            //     ->where('nama_surat', $suratData['nama_surat'])
+            //     ->where('nama_pemohon', $suratData['nama_pemohon'])
+            //     ->orderBy('surat_id', 'DESC')
+            //     ->first();
 
-            $judul = "Saya%20mau%20membuat%20" . $suratData['nama_surat'] . ",%20dengan%20ketentuan%20:";
-            $suratID = "%0ASurat%20ID%20:%20" . $findId['surat_id'];
+            $aplikasi = "e-Gilang";
+            $border = "%0A------------------";
+
             $nama = "%0ANama%20:%20" . $suratData['nama_pemohon'];
             $alamat = "%0AAlamat%20:%20" . $suratData['alamat_pemohon'];
             $nik = "%0ANIK%20:%20" . $suratData['nik_pemohon'];
+            $namaSurat = "%0A%0A" . $suratData['nama_surat'];
 
-            $pesan = $judul . $suratID . $nama . $alamat . $nik;
+
+            $header = $aplikasi . $border . $nama . $alamat . $nik;
+            if ($suratData['nama_surat'] == 'Surat Keterangan Kematian') {
+                $nama_data = "%0ANama%20dan%20Alias%20:%20" . $suratData['nama_data'];
+                $jenis_kelamin = "%0AJenis%20Kelamin%20:%20" . $suratData['jenis_kelamin'];
+                $tempat = "%0ATempat%20Meninggal%20:%20" . $suratData['tempat'];
+                $hubungan = "%0AHubungan%20Pelapor%20dengan%20yang%20Meninggal%20:%20" . $suratData['hubungan'];
+            } else if ($suratData['nama_surat'] == 'Surat Keterangan Kelahiran') {
+                $nama_data = "%0ANama%20Bayi%20:%20" . $suratData['nama_data'];
+                $jenis_kelamin = "%0AJenis%20Kelamin%20Bayi%20:%20" . $suratData['jenis_kelamin'];
+                $tempat = "%0ATempat%20Kelahiran%20:%20" . $suratData['tempat'];
+                $hubungan = "%0AHubungan%20Pelapor%20dengan%20Bayi%20:%20" . $suratData['hubungan'];
+            } else if ($suratData['nama_surat'] == "Surat Keterangan Pengantar Kehilangan") {
+                $nama_data = "%0ANama%20Barang%20Hilang%20:%20" . $suratData['nama_data'];
+                $tempat = "%0ATempat%20Kehilangan%20:%20" . $suratData['tempat'];
+            } else if ($suratData['nama_surat'] == "Surat Keterangan Domisili Usaha") {
+                $nama_data = "%0AKeterangan%20Usaha%20:%20" . $suratData['nama_data'];
+            } else if ($suratData['nama_surat'] == "Surat Keterangan Usaha") {
+                $nama_data = "%0ANama/Jenis%20Usaha%20:%20" . $suratData['nama_data'];
+            } else {
+                $nama_data = null;
+                $jenis_kelamin = null;
+                $tempat = null;
+                $hubungan = null;
+            }
+            $isi = $namaSurat
+                . ((is_null($nama_data)) ? "" : $nama_data)
+                . ((isset($suratData['umur'])) ? "%0AUmur%20:%20" . $suratData['umur'] . "%20Tahun" : "")
+                . ((is_null($jenis_kelamin)) ? "" : $jenis_kelamin)
+                . ((isset($suratData['agama'])) ? "%0AAgama%20:%20" . $suratData['agama'] : "")
+                . ((isset($suratData['nama_ayah'])) ? "%0ANama%20Ayah%20:%20" . $suratData['nama_ayah'] : "")
+                . ((isset($suratData['nama_ibu'])) ? "%0ANama%20Ibu%20:%20" . $suratData['nama_ibu'] : "")
+                . ((isset($suratData['alamat_data'])) ? "%0AAlamat%20:%20" . $suratData['alamat_data'] : "")
+                . ((isset($suratData['tanggal'])) ? "%0AHari/Tanggal/Jam%20:%20" . $suratData['tanggal'] : "")
+                . ((is_null($tempat)) ? "" : $tempat)
+                . ((isset($suratData['penyebab'])) ? "%0APenyebab%20Kematian%20:%20" . $suratData['penyebab'] : "")
+                . ((is_null($hubungan)) ? "" : $hubungan)
+                . ((isset($suratData['ciri_ciri'])) ? "%0ACiri-ciri%20Barang%20:%20" . $suratData['ciri_ciri'] : "")
+                . ((isset($suratData['jml_tanggungan_anak'])) ? "%0AJumlah%20Tanggungan%20Anak%20:%20" . $suratData['jml_tanggungan_anak'] : "")
+                . ((isset($suratData['identitas_kartu'])) ? "%0AIdentitas%20dalam%20(nama%20kartu)%20:%20" . $suratData['identitas_kartu'] : "")
+                . ((isset($suratData['nomor_identitas'])) ? "%0ANomor%20Identitas%20:%20" . $suratData['nomor_identitas'] : "")
+                . ((isset($suratData['perbedaan'])) ? "%0APerbedaan%20:%20" . $suratData['perbedaan'] : "")
+                . ((isset($suratData['keterangan'])) ? "%0AKeterangan%20:%20" . $suratData['keterangan'] : "")
+                . ((isset($suratData['keperluan'])) ? "%0AKeperluan%20:%20" . $suratData['keperluan'] : "");
+            $pesan = $header . $isi;
 
             return redirect()->to("https://api.whatsapp.com/send?phone=+6285729982887&text=" . $pesan);
         } else {

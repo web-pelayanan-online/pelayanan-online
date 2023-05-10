@@ -80,7 +80,7 @@ class AuthController extends BaseController
                 "required" => "{field} tidak boleh kosong"
             ],
         ];
-        if (!$this->validate($rules, $messages)) return $this->fail($this->validator->getErrors());
+        // if (!$this->validate($rules, $messages)) return $this->fail($this->validator->getErrors());
 
         // recaptcha V3 Validation
         $recaptcha_url = "https://www.google.com/recaptcha/api/siteverify";
