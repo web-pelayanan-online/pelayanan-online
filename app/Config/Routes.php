@@ -29,19 +29,20 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/auth', 'Admin::login');
-$routes->post('/register', 'AuthController::register');
-$routes->get('/register', 'Admin::register');
-$routes->post('/login', 'AuthController::login');
-$routes->get('/logout', 'AuthController::logout');
+
+// $routes->get('/auth', 'Admin::login');
+// $routes->post('/register', 'AuthController::register');
+// $routes->get('/register', 'Admin::register');
+// $routes->post('/login', 'AuthController::login');
+// $routes->get('/logout', 'AuthController::logout');
 
 // ADMIN
-$routes->get('/admin_dashboard', 'Admin::dashboard', ['filter' => 'auth']);
-$routes->get('/admin_verifikasi', 'Admin::verifikasi', ['filter' => 'auth']);
-$routes->get('/admin_terima', 'Admin::terima', ['filter' => 'auth']);
-$routes->get('/admin_tolak', 'Admin::tolak', ['filter' => 'auth']);
-$routes->get('/surat/(:any)', 'Admin::detail/$1', ['filter' => 'auth']);
-$routes->get('/status/(:segment)/(:num)', 'Admin::status/$1/$2', ['filter' => 'auth']);
+// $routes->get('/admin_dashboard', 'Admin::dashboard', ['filter' => 'auth']);
+// $routes->get('/admin_verifikasi', 'Admin::verifikasi', ['filter' => 'auth']);
+// $routes->get('/admin_terima', 'Admin::terima', ['filter' => 'auth']);
+// $routes->get('/admin_tolak', 'Admin::tolak', ['filter' => 'auth']);
+// $routes->get('/surat/(:any)', 'Admin::detail/$1', ['filter' => 'auth']);
+// $routes->get('/status/(:segment)/(:num)', 'Admin::status/$1/$2', ['filter' => 'auth']);
 
 // USER
 $routes->post('/pengajuan/(:segment)', 'SuratController::pengajuan/$1');

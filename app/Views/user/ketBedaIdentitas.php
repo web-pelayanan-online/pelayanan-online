@@ -22,7 +22,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nomor Identitas</label>
-                        <input type="number" class="form-control" name="nomor_pemohon" placeholder="" required>
+                        <input type="number" class="form-control" name="nomor_identitas" placeholder="" required>
                     </div>
                 </div>
                 <div class="col">
