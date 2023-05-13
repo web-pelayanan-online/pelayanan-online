@@ -39,23 +39,23 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama Barang Hilang</label>
-                        <input type="text" class="form-control" name="nama_data" placeholder="" required>
+                        <input type="text" class="form-control" name="nama_data" placeholder="KTP" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Tempat Kehilangan</label>
-                        <input type="text" class="form-control" name="tempat" placeholder="" required>
+                        <input type="text" class="form-control" name="tempat" placeholder="Toko Fotocopy" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Ciri-Ciri Barang</label>
-                        <input type="text" class="form-control" name="ciri_ciri" placeholder="" required>
+                        <input type="text" class="form-control" name="ciri_ciri" placeholder="Nomor 3402061111110001 atau ciri lainnya" required>
                     </div>
                 </div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Keterangan Kejadian</label>
-                <textarea class="form-control" name="keterangan" rows="3" required></textarea>
+                <textarea class="form-control" name="keterangan" rows="3" placeholder="Jelaskan kejadian hilang dengan detail dan jelas" required></textarea>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto">
                 <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>

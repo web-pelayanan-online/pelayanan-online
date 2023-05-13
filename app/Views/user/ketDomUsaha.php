@@ -32,12 +32,16 @@
                 </div>
             </div>
             <div class="mb-3">
+                <label class="form-label">Alamat Usaha</label>
+                <textarea class="form-control" name="alamat_data" rows="3" placeholder="Jodog RT 01 Gilangharjo Pandak Bantul" required></textarea>
+            </div>
+            <div class="mb-3">
                 <label class="form-label">Keterangan Usaha</label>
-                <textarea class="form-control" name="nama_data" rows="3" required></textarea>
+                <textarea class="form-control" name="nama_data" rows="3" placeholder="Ternak Kambing" required></textarea>
             </div>
             <div class="mb-3">
                 <label class="form-label">Keperluan</label>
-                <textarea class="form-control" name="keperluan" rows="3" required></textarea>
+                <textarea class="form-control" name="keperluan" rows="3" placeholder="Persyaratan Kredit Bank" required></textarea>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto">
                 <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>

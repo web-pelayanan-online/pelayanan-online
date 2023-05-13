@@ -34,22 +34,22 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
-                        <label class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" name="tanggal" placeholder="" required>
+                        <label class="form-label">Hari/Tanggal/Jam Lahir</label>
+                        <input type="datetime-local" class="form-control" name="tanggal" placeholder="" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama Bayi</label>
-                        <input type="text" class="form-control" name="nama_data" placeholder="" required>
+                        <input type="text" class="form-control" name="nama_data" placeholder="Alex" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Hubungan Pelapor Dengan Bayi</label>
-                        <input type="text" class="form-control" name="hubungan" placeholder="" required>
+                        <input type="text" class="form-control" name="hubungan" placeholder="Orang Tua Kandung" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <label class="form-label">Alamat Kelahiran</label>
-                        <input type="text" class="form-control" name="tempat" placeholder="" required>
+                        <label class="form-label">Tempat Kelahiran</label>
+                        <input type="text" class="form-control" name="tempat" placeholder="Bantul" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jenis Kelamin Bayi</label>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Anak Ke -</label>
-                        <input type="text" class="form-control" name="anak_ke" placeholder="" required>
+                        <input type="text" class="form-control" name="anak_ke" placeholder="1" required>
                     </div>
                 </div>
             </div>
@@ -69,13 +69,13 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Nama Ayah</label>
-                        <input type="text" class="form-control" name="nama_ayah" placeholder="" required>
+                        <input type="text" class="form-control" name="nama_ayah" placeholder="Martono" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Nama Ibu</label>
-                        <input type="text" class="form-control" name="nama_ibu" placeholder="" required>
+                        <input type="text" class="form-control" name="nama_ibu" placeholder="Martini" required>
                     </div>
                 </div>
             </div>

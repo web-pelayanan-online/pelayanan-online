@@ -32,7 +32,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Keperluan</label>
-                <textarea class="form-control" name="keperluan" rows="3" required></textarea>
+                <textarea class="form-control" name="keperluan" rows="3" placeholder="Melamar Pekerjaan/ Mendaftar Polri/ Mendaftar CPNS/ Lainnya" required></textarea>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto">
                 <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>

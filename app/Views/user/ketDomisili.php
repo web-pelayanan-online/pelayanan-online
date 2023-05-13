@@ -18,7 +18,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Alamat Sesuai KTP</label>
-                        <input type="text" class="form-control" name="alamat_data" placeholder="" required>
+                        <input type="text" class="form-control" name="alamat_data" placeholder="Kadisoro RT 02 Gilangharjo Pandak Bantul" required>
                     </div>
                 </div>
                 <div class="col">
@@ -28,13 +28,13 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Alamat Domisili</label>
-                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="" required>
+                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="Jodog RT 02 Gilangharjo Pandak Bantul" required>
                     </div>
                 </div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Keterangan</label>
-                <textarea class="form-control" name="keterangan" rows="3" required></textarea>
+                <textarea class="form-control" name="keterangan" rows="3" placeholder="Mendaftar sekolah anak kami yang Bernama (isikan nama lengkap anak)" required></textarea>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto">
                 <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>
