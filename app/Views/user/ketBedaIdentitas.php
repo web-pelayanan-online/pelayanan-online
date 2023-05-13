@@ -22,7 +22,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nomor Identitas</label>
-                        <input type="number" class="form-control" name="nomor_identitas" placeholder="" required>
+                        <input type="number" class="form-control" name="nomor_identitas" placeholder="0003400002" required>
                     </div>
                 </div>
                 <div class="col">
@@ -32,11 +32,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Identitas dalam (Nama Kartu)</label>
-                        <input type="text" class="form-control" name="identitas_kartu" placeholder="" required>
+                        <input type="text" class="form-control" name="identitas_kartu" placeholder="BPJS KIS" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Perbedaan</label>
-                        <input type="text" class="form-control" name="perbedaan" placeholder="" required>
+                        <input type="text" class="form-control" name="perbedaan" placeholder="Nama & Tgl Lahir" required>
                     </div>
                 </div>
             </div>

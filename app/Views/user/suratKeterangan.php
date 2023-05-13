@@ -34,13 +34,13 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Keterangan</label>
-                        <textarea class="form-control" name="keterangan" rows="3" required></textarea>
+                        <textarea class="form-control" name="keterangan" rows="3" placeholder="Bahwa saya benar-benar belum menikah" required></textarea>
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Keperluan</label>
-                        <textarea class="form-control" name="keperluan" rows="3" required></textarea>
+                        <textarea class="form-control" name="keperluan" rows="3" placeholder="Mendaftar Polri" required></textarea>
                     </div>
                 </div>
             </div>

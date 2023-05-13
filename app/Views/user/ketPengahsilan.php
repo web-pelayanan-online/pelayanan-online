@@ -21,8 +21,8 @@
                         <input type="number" class="form-control" name="nik_pemohon" placeholder="" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Keterangan Usaha</label>
-                        <textarea class="form-control" name="keterangan" rows="3" required></textarea>
+                        <label class="form-label">Penghasilan Rata-rata Perbulan (Rp)</label>
+                        <textarea class="form-control" name="keterangan" rows="3" placeholder="Rp. 1.700.000,-" required></textarea>
                     </div>
                 </div>
                 <div class="col">
@@ -32,11 +32,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jumlah Tanggungan Anak</label>
-                        <input type="number" class="form-control" name="jml_tanggungan_anak" placeholder="" required>
+                        <input type="number" class="form-control" name="jml_tanggungan_anak" placeholder="3" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Keperluan</label>
-                        <textarea class="form-control" name="keperluan" rows="3" required></textarea>
+                        <textarea class="form-control" name="keperluan" rows="3" placeholder="Mendaftar Perguruan Tinggi Anak Kami Yang bernama (Nama Anak Lengkap)" required></textarea>
                     </div>
                 </div>
             </div>

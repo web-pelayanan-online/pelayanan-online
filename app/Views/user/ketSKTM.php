@@ -32,7 +32,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Keperluan</label>
-                <textarea class="form-control" name="keterangan" rows="3" required></textarea>
+                <textarea class="form-control" name="keterangan" rows="3" placeholder="Persyaratan Pengajuan Jaminan Kesehatan" required></textarea>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto">
                 <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>

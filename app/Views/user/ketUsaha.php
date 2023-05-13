@@ -24,7 +24,7 @@
                 <div class="col">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Alamat</label>
-                        <input type="text" class="form-control" name="alamat_pemohon" required>
+                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="Ternak Kambing" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama/Jenis Usaha</label>
@@ -34,7 +34,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Keterangan</label>
-                <textarea class="form-control" name="keterangan" rows="3" required></textarea>
+                <textarea class="form-control" name="keterangan" rows="3" placeholder="Persyaratan Kredit Di Bank" required></textarea>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto">
                 <button class="btn" type="submit" style="background-color:#b78a02; color:white;">Submit</button>
