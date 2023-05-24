@@ -22,7 +22,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Penghasilan Rata-rata Perbulan (Rp)</label>
-                        <textarea class="form-control" name="keterangan" rows="3" placeholder="Rp. 1.700.000,-" required></textarea>
+                        <textarea class="form-control" name="penghasilan" rows="3" placeholder="Rp. 1.700.000,-" required></textarea>
                     </div>
                 </div>
                 <div class="col">

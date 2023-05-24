@@ -24,11 +24,11 @@
                 <div class="col">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Alamat</label>
-                        <input type="text" class="form-control" name="alamat_pemohon" placeholder="Ternak Kambing" required>
+                        <input type="text" class="form-control" name="alamat_pemohon" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nama/Jenis Usaha</label>
-                        <input type="text" class="form-control" name="nama_data" required>
+                        <input type="text" class="form-control" name="nama_data" placeholder="Ternak Kambing" required>
                     </div>
                 </div>
             </div>
