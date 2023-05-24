@@ -20,7 +20,7 @@ class SuratController extends BaseController
             'alamat_data' => 'permit_empty',
             'keterangan' => 'permit_empty',
             'keperluan' => 'permit_empty',
-            'penghasilan' => 'permit_empty|numeric',
+            'penghasilan' => 'permit_empty',
             'jml_tanggungan_anak' => 'permit_empty|numeric',
             'identitas_kartu' => 'permit_empty',
             'nomor_identitas' => 'permit_empty|numeric',
@@ -43,7 +43,6 @@ class SuratController extends BaseController
                 'required' => '{field} tidak boleh kosong',
                 'numeric' => '{field} harus berisi angka'
             ],
-            'penghasilan' => ['numeric' => '{field} harus berisi angka'],
             'jml_tanggungan_anak' => ['numeric' => '{field} harus berisi angka'],
             'nomor_identitas' => ['numeric' => '{field} harus berisi angka'],
             'umur' => ['numeric' => '{field} harus berisi angka'],
@@ -123,15 +122,19 @@ class SuratController extends BaseController
             $isi = $namaSurat
                 . ((is_null($nama_data)) ? "" : $nama_data)
                 . ((isset($suratData['umur'])) ? "%0AUmur%20:%20" . $suratData['umur'] . "%20Tahun" : "")
-                . ((is_null($jenis_kelamin)) ? "" : $jenis_kelamin)
+                // . ((is_null($jenis_kelamin)) ? "" : $jenis_kelamin)
+                . ((isset($jenis_kelamin)) ? $jenis_kelamin : "")
                 . ((isset($suratData['agama'])) ? "%0AAgama%20:%20" . $suratData['agama'] : "")
                 . ((isset($suratData['nama_ayah'])) ? "%0ANama%20Ayah%20:%20" . $suratData['nama_ayah'] : "")
                 . ((isset($suratData['nama_ibu'])) ? "%0ANama%20Ibu%20:%20" . $suratData['nama_ibu'] : "")
                 . ((isset($suratData['alamat_data'])) ? "%0AAlamat%20:%20" . $suratData['alamat_data'] : "")
-                . ((isset($suratData['tanggal'])) ? "%0AHari/Tanggal/Jam%20:%20" . $suratData['tanggal'] : "")
-                . ((is_null($tempat)) ? "" : $tempat)
+                . ((isset($suratData['tanggal'])) ? "%0AHari/Tanggal/Jam%20:%20" . date('Y-m-d', strtotime($suratData['tanggal'])) . ",%20" . date("H:i", strtotime($suratData['tanggal'])) : "")
+                // . ((is_null($tempat)) ? "" : $tempat)
+                . ((isset($tempat)) ? $tempat : "")
                 . ((isset($suratData['penyebab'])) ? "%0APenyebab%20Kematian%20:%20" . $suratData['penyebab'] : "")
-                . ((is_null($hubungan)) ? "" : $hubungan)
+                . ((isset($suratData['penghasilan'])) ? "%0APenghasilan%20Rata-rata%20Perbulan%20:%20" . $suratData['penghasilan'] : "")
+                // . ((is_null($hubungan)) ? "" : $hubungan)
+                . ((isset($hubungan)) ? $hubungan : "")
                 . ((isset($suratData['ciri_ciri'])) ? "%0ACiri-ciri%20Barang%20:%20" . $suratData['ciri_ciri'] : "")
                 . ((isset($suratData['jml_tanggungan_anak'])) ? "%0AJumlah%20Tanggungan%20Anak%20:%20" . $suratData['jml_tanggungan_anak'] : "")
                 . ((isset($suratData['identitas_kartu'])) ? "%0AIdentitas%20dalam%20(nama%20kartu)%20:%20" . $suratData['identitas_kartu'] : "")
