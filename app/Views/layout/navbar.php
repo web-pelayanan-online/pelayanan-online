@@ -2,6 +2,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="<?= base_url('') ?>">
             <img src="img/Bantul.png" style="width: 30px;" alt="">
+            <img src="img/UAD-warna.png" style="width: 40px;" alt="">
             Kalurahan Gilangharjo
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
